@@ -19,7 +19,7 @@ gulp.task('js',  function() {
 		'src/js/script.js', 
 		])
 	.pipe(concat('scripts.min.js'))
-	// .pipe(uglify()) 
+	.pipe(uglify()) 
 	.pipe(gulp.dest('dist/js'))
 	.pipe(browserSync.reload({stream: true}));
 });
@@ -68,17 +68,17 @@ gulp.task('build', ['removedist', 'imagemin'], function() {
 		'src/*.html',
 		]).pipe(gulp.dest('dist'));
 
-	// var buildCss = gulp.src([
-	// 	'src/css/**/*',
-	// 	]).pipe(gulp.dest('dist/css'));
+	var buildCss = gulp.src([
+		'src/css/**/*',
+		]).pipe(gulp.dest('dist/css'));
 
-	// var buildJs = gulp.src([
-	// 	'src/js/scripts.min.js',
-	// 	]).pipe(gulp.dest('dist/js'));
+	var buildJs = gulp.src([
+		'src/js/owl.carousel.min.js',
+		]).pipe(gulp.dest('dist/js'));
 
-	var buildFonts = gulp.src([
-		'src/css/font/*',
-		]).pipe(gulp.dest('dist/css/font'));
+	// var buildFonts = gulp.src([
+	// 	'src/css/font/*',
+	// 	]).pipe(gulp.dest('dist/css/font'));
 
 });
 

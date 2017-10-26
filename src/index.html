@@ -10,6 +10,19 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
         crossorigin="anonymous">
+
+
+    <!-- amCharts javascript sources -->
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/pie.js"></script>
+
+
+    <!-- amCharts javascript code -->
+
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 
@@ -19,13 +32,13 @@
         <div class="container">
             <div class="row justify-content-end pt-4 pb-1">
                 <ul class="fa fa-caret-down pr-3">
-                    <li class="az_lan" ></li>
-                    <li class="en_lan" ></li>
-                    <li class="ru_lan" ></li>
+                    <li class="az_lan"></li>
+                    <li class="en_lan"></li>
+                    <li class="ru_lan"></li>
                 </ul>
             </div>
             <div class="row justify-content-between">
-                <div class="col-lg-2 col-md-6 col-sm-6"> 
+                <div class="col-lg-2 col-md-6 col-sm-6">
                     <div class="row">
                         <div class="col-lg-5 col-md-6">
                             <div class="row">
@@ -41,14 +54,16 @@
                 </div>
                 <div class="col-lg-3  col-md-4 col-sm-6 align-self-center">
                     <div class="row ">
-                        <div class="col-md-6 col-sm-6 col-6"> 
+                        <div class="col-md-6 col-sm-6 col-6">
                             <div class="row justify-content-end">
-                                <a href="" class="fa fa_user"><img src="image/fa-user.png" alt="sadasd"> Login</a>
+                                <a href="" class="fa fa_user">
+                                    <img src="image/fa-user.png" alt="sadasd"> Login</a>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6 col-6">
                             <div class="row justify-content-end">
-                                <a href="" class="fa fa_plus"><img src="image/plas.png" alt=""> Register</a>
+                                <a href="" class="fa fa_plus">
+                                    <img src="image/plas.png" alt=""> Register</a>
                             </div>
                         </div>
                     </div>
@@ -70,8 +85,104 @@
                     </div>
                 </div>
                 <div class="col-md-10">
-                    <div class="row">
-                        sdasdas
+                    <div class="row justify-content-end">
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="owl-carousel owl-theme">
+                                    <div class="item general_health">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-xl-6">
+                                                    <div class="row">
+                                                        <div class="main_slider_div col-10 mb-4">
+                                                            <div class="row pl-3">
+                                                                <h1 class="main_h1">
+                                                                    <span>Factors</span> Affecting General Health</h1>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mt-4 col-12">
+                                                            <div class="row">
+                                                                <p class="main_paragraph">
+                                                                    Approximately
+                                                                    <b class="one_b">25%</b> of our overall health depends from genetics and
+                                                                    <b class="two_b">75%</b> from our daily lifestyle.
+                                                                    <b class="three_b">The Mobile Health Station</b> and
+                                                                    <b class="three_b">Health Portal</b> is intended to allow users manage daily
+                                                                    lifestyle, control their own basic health parameters,
+                                                                    obtain accurate health reports and provide them with
+                                                                    detailed health status information.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6">
+                                                    <div class="row">
+                                                        <div id="chartdiv" style="width: 100%; height: 200px; background-color: #FFFFFF;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- doctor benefits slider item start -->
+                                    <div class="item doctor_benefits">
+                                        <div class="col-md-12">
+                                            <div class="row pt-2">
+                                                <div class="col-4 main_slider_div my-4">
+                                                    <div class="row  pl-3">
+                                                        <h1 class="main_h1">
+                                                            <span>Doctor</span> Benefits</h1>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mt-4">
+                                                    <div class="row">
+                                                        <p class="main_paragraph">
+                                                            <b class="three_b">Treat</b> own patients
+                                                            <b class="three_b">anywhere, anytime</b>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-11">
+                                                    <div class="row">
+                                                        <div class="col-xl-4 d-flex py-3">
+                                                            <div class="row">
+                                                                <div class="circle_par circle_par_1 p-5"><p class="main_paragraph">Remote health care</p></div> 
+                                                                <p class="smple_par mr-5">Remote access to electronic personal health records helps
+                                                                    doctors to accelerate diagnosis and treatment, provide
+                                                                    highest levels of remote health care, reduce inefficiencies,
+                                                                    administrative costs and ultimately offering better,
+                                                                    faster care.</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4 d-flex py-3">
+                                                            <div class="row">
+                                                                <div class="circle_par circle_par_2 p-5"><p class="main_paragraph">Increasing the effectiveness</p></div>
+                                                                <p class="smple_par mr-5">Increase the number of patients who can be treated during
+                                                                    a given period of time and increase effectiveness of
+                                                                    treatment.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4 d-flex py-3">
+                                                            <div class="row">
+                                                                <div class="circle_par circle_par_3 p-5"><p class="main_paragraph">New streams of revenue</p></div> 
+                                                                <p class="smple_par mr-5">Provide new streams of revenue in the form of virtual consultations
+                                                                    and assessments.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="row">
+                                <!--<<<<<< for slider nav-( dots ) >>>>>>-->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -79,18 +190,17 @@
     </section>
 
 
-     
-     <!-- <script src="jquery.min.js"></script> -->
-    <script  src="https://code.jquery.com/jquery-3.2.1.min.js"  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="  crossorigin="anonymous"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
     <!-- bootstrap -->
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" -->
-        <!-- crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
         crossorigin="anonymous"></script>
     <!-- end bootstrap -->
+    <script src="js/owl.carousel.min.js"></script>
+
     <script src="js/scripts.min.js"></script>
 </body>
 
