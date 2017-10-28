@@ -1,51 +1,90 @@
+@import 'mixin'
+
 #main_body
     .main_navbar
         ul  
             width: 100% 
             li 
-                font-family: MarkPro
-                font-size: 16px
-                font-family: "MarkPro"
-                color: rgb(26, 26, 26)
+                @include text_style(16px, $font_familyMark, $color1, 900,  1.875, -0.04em ) 
                 text-transform: uppercase
-                line-height: 1.875
-                font-weight: 900
                 cursor: pointer
                 width: 100%
                 &:hover
-                    color: #83bc00
-    .owl-dots
-        position: absolute
-        right: -11.7%
-        top: 50%
-        transform: rotate(90deg)
-    .doctor_benefits
-        .circle_par
-            position: relative
-            &:before
-                content: " "
-                position: absolute
-                z-index: 0 
-                background: red
-                width: 100px
-                height: 100px
-                border-radius: 50%
-                top: 25px
-                left: 0px
-            .main_paragraph
+                    color: $greenA400
+    .owl-carousel
+        .owl-dots
+            position: absolute
+            right: -11.7%
+            top: 50%
+            transform: rotate(90deg)
+            .owl-dot.active
+                span
+                    background-color: rgba(0, 179, 227, 0.8)
+        .doctor_benefits
+            .circle_par
                 position: relative
-                z-index: 1
-        .circle_par_1
                 &:before
-                    background-color: rgb(49, 197, 240)
-        .circle_par_2
-                &:before
-                    background-color: rgb(255, 124, 0)
-        .circle_par_3
-                &:before
-                    background-color: rgb(1, 206, 126)
-        .smple_par
-            border-bottom: 3px solid rgb(131, 188, 0)
-            height: 58%
+                    content: " "
+                    position: absolute
+                    z-index: 0 
+                    background: red
+                    width: 100px
+                    height: 100px
+                    border-radius: 50%
+                    top: 25px
+                    left: 0px
+                .main_paragraph
+                    position: relative
+                    font-weight: 800
+                    letter-spacing: 0
+                    z-index: 1
+            .circle_par_1
+                    &:before
+                        background-color: $blue500
+            .circle_par_2
+                    &:before
+                        background-color: $orange700
+            .circle_par_3
+                    &:before
+                        background-color: $greenA700
+            .doctor_text
+                border-bottom: 3px solid rgb(131, 188, 0)
+                overflow: hidden
+                height: percentage( 200px / 368px)
+                .smple_par
+                    letter-spacing: -0.05em 
+                    b
+                        font-weight: 900
+                        color: $color2 - 20
+            .doctor_text_2
+                border-bottom-color: $orange700
+            .doctor_text_3
+                border-bottom-color: $greenA700
+        .our_mission
+            .our_mission_div
+                border-radius: 5px
+                box-shadow: 0px 10px 40px 0px $shadow
+                height: 122px 
+                p
+                    @include text_style(22px, $font_familyMark, white, 500,  1.2, -0.04em ) 
+                img
+                    width: auto
+            .our_mission_div1
+                background-color: $greenA600
+            .our_mission_div2
+                background-color: $blue700
+            .our_mission_div3
+                background-color: $purple700
+            .our_mission_div4
+                background-color: $amber700
+            .smple_par
+                color: #ffffff
+        .supported_param
+            .sp_image
+                height: 100px
+            .smple_par
+                text-align: center
+                padding: 0 14px
+
 
             

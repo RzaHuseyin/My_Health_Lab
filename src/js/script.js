@@ -5,10 +5,12 @@ $('.owl-carousel').owlCarousel({
     item: 1,
     dots: true,
     margin: 10,
-    responsiveClass: true,
+    animateOut: 'slideOutUp',
+    animateIn: 'slideInUp',
     autoplay: true,
     autoplayTimeout: 100,
     autoplayHoverPause: true,
+    responsiveClass: true,
     responsive: {
         0: {
             items: 1,

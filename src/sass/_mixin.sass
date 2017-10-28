@@ -1,0 +1,33 @@
+// font family
+$font_familyMark: 'MarkPro'
+$font_familyRoboto: 'Roboto', sans-serif
+// $font_familyMyriadPro: "Myriad Pro"
+
+// colors
+$color1 : rgb(26, 26, 26) 
+$color2 : rgb(51, 51, 51)
+$greenA400: #83bc00
+$greeey800: rgb(82, 82, 82)
+$blue500: rgb(49, 197, 240)
+$orange700: rgb(255, 124, 0)
+$greenA700: rgb(1, 206, 126)
+$greenA600: rgb(149, 201, 29)
+$shadow: rgba(0, 0, 0, 0.15)
+$blue700: rgb(65, 169, 204)
+$purple700: rgb(138, 99, 179)
+$amber700: rgb(253, 189, 87)
+
+@mixin text_style($font_size: 13px,$font_family: Roboto,$text_color: blue, $font_weight: 400, $line_height: 1.2, $letter_spacing: 0em)
+    font-size: $font_size
+    color: $text_color
+    font-family: $font_family
+    font-weight: $font_weight
+    line-height: $line_height
+    letter-spacing: $letter_spacing
+
+// language dropdown background image
+$icons: (az, en, ru) 
+@each $item in $icons // well be >> $icons: (az, en, ru)
+    .#{$item}_lan
+        background: url('../image/flagaz.png') no-repeat //well be >>>background: url('../image/flag#{$item}.png') no-repeat
+        

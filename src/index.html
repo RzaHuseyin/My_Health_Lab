@@ -5,23 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Phoneix</title>
+    <title>My Health Lab</title>
     <script src="https://use.fontawesome.com/51d8275571.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
         crossorigin="anonymous">
-
-
     <!-- amCharts javascript sources -->
     <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
     <script type="text/javascript" src="https://www.amcharts.com/lib/3/pie.js"></script>
-
-
     <!-- amCharts javascript code -->
 
-
+    <!-- owlcarusel css -->
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- owlcarusel animate -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- font css -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="css/font/stylesheet.css">
 
     <link rel="stylesheet" href="css/main.min.css">
 </head>
@@ -46,7 +48,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6  col-md-6 d-flex align-items-stretch pl-4">
-                            <div class="row align-items-center">
+                            <div class="row align-items-center pr-2">
                                 <h3>My Health Lab</h3>
                             </div>
                         </div>
@@ -89,13 +91,15 @@
                         <div class="col-md-10">
                             <div class="row">
                                 <div class="owl-carousel owl-theme">
+
+                                    <!-- <<<< start general_health slider item  -->
                                     <div class="item general_health">
                                         <div class="col-md-12">
                                             <div class="row">
                                                 <div class="col-xl-6">
                                                     <div class="row">
-                                                        <div class="main_slider_div col-10 mb-4">
-                                                            <div class="row pl-3">
+                                                        <div class="main_slider_div col-9 mb-4">
+                                                            <div class="row pl-4">
                                                                 <h1 class="main_h1">
                                                                     <span>Factors</span> Affecting General Health</h1>
                                                             </div>
@@ -118,13 +122,15 @@
                                                 </div>
                                                 <div class="col-xl-6">
                                                     <div class="row">
-                                                        <div id="chartdiv" style="width: 100%; height: 200px; background-color: #FFFFFF;"></div>
+                                                        <div id="chartdiv" style="width: 100%; height: 400px; background-color: #FFFFFF;"></div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- doctor benefits slider item start -->
+                                    <!--<<<>>>>>> end general_health slider item  -->
+                                    
+                                    <!-- <<<< start doctor_benefits slider item  -->
                                     <div class="item doctor_benefits">
                                         <div class="col-md-12">
                                             <div class="row pt-2">
@@ -146,28 +152,43 @@
                                                     <div class="row">
                                                         <div class="col-xl-4 d-flex py-3">
                                                             <div class="row">
-                                                                <div class="circle_par circle_par_1 p-5"><p class="main_paragraph">Remote health care</p></div> 
-                                                                <p class="smple_par mr-5">Remote access to electronic personal health records helps
-                                                                    doctors to accelerate diagnosis and treatment, provide
-                                                                    highest levels of remote health care, reduce inefficiencies,
-                                                                    administrative costs and ultimately offering better,
-                                                                    faster care.</p>
+                                                                <div class="circle_par circle_par_1 p-5">
+                                                                    <p class="main_paragraph">Remote health care</p>
+                                                                </div>
+                                                                <div class="doctor_text doctor_text_1 mr-5 pb-4">
+                                                                    <p class="smple_par">Remote access to electronic personal health records helps
+                                                                        doctors to
+                                                                        <b>accelerate diagnosis and treatment, provide</b>
+                                                                        highest levels of
+                                                                        <b>remote health care,</b> reduce inefficiencies, administrative
+                                                                        costs and ultimately offering better, faster care.</p>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-xl-4 d-flex py-3">
                                                             <div class="row">
-                                                                <div class="circle_par circle_par_2 p-5"><p class="main_paragraph">Increasing the effectiveness</p></div>
-                                                                <p class="smple_par mr-5">Increase the number of patients who can be treated during
-                                                                    a given period of time and increase effectiveness of
-                                                                    treatment.
-                                                                </p>
+                                                                <div class="circle_par circle_par_2 p-5">
+                                                                    <p class="main_paragraph">Increasing the effectiveness</p>
+                                                                </div>
+                                                                <div class="doctor_text doctor_text_2 mr-5 pb-4">
+                                                                    <p class="smple_par">Increase the number of patients who can be treated during
+                                                                        a given period of time and increase effectiveness
+                                                                        of treatment.
+                                                                    </p>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-xl-4 d-flex py-3">
                                                             <div class="row">
-                                                                <div class="circle_par circle_par_3 p-5"><p class="main_paragraph">New streams of revenue</p></div> 
-                                                                <p class="smple_par mr-5">Provide new streams of revenue in the form of virtual consultations
-                                                                    and assessments.</p>
+                                                                <div class="circle_par circle_par_3 p-5">
+                                                                    <p class="main_paragraph">New streams of revenue</p>
+                                                                </div>
+                                                                <div class="doctor_text doctor_text_3 mr-5 pb-4">
+                                                                    <p class="smple_par">Provide
+                                                                        <b>new</b> streams of
+                                                                        <b>revenue in the form of virtual consultations</b>
+                                                                        and assessments.</p>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -175,6 +196,161 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!--<<<>>>>>> end doctor_benefits slider item  -->
+
+                                    <!-- <<<< start our_mission slider item  -->
+                                    <div class="item our_mission">
+                                        <div class="col-md-12">
+                                            <div class="row pt-2">
+                                                <div class="col-4 main_slider_div my-4">
+                                                    <div class="row  pl-3">
+                                                        <h1 class="main_h1">
+                                                            <span>Our Mission </span>Through this platform</h1>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row pt-4">
+                                                        <div class="col-xl-6 py-4 pr-4">
+                                                            <div class="row pr-4">
+                                                                <div class="our_mission_div our_mission_div1 w-100 d-flex">
+                                                                    <div class="col-3 align-self-center px-4">
+                                                                        <div class="row px-2">
+                                                                            <img src="image/om_health_care.png" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-7 align-self-center">
+                                                                        <div class="row">
+                                                                            <p>Train people to a healthy lifestyle </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6 py-4 pr-4">
+                                                            <div class="row pr-4">
+                                                                <div class="our_mission_div our_mission_div2 w-100 d-flex">
+                                                                    <div class="col-3 align-self-center px-4">
+                                                                        <div class="row px-2">
+                                                                            <img src="image/om_band_aid1.png" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-7 align-self-center">
+                                                                        <div class="row">
+                                                                            <p>Self-manage own health and daily lifestyle</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6 py-4 pr-4">
+                                                            <div class="row pr-4">
+                                                                <div class="our_mission_div our_mission_div3 w-100 d-flex">
+                                                                    <div class="col-3 align-self-center px-4">
+                                                                        <div class="row px-2">
+                                                                            <img src="image/om_first_aid_kit1.png" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-5 align-self-center">
+                                                                        <div class="row">
+                                                                            <p>Help people to extend healthy life expectancy</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6 py-4 pr-4">
+                                                            <div class="row pr-4">
+                                                                <div class="our_mission_div our_mission_div4 w-100 d-flex">
+                                                                    <div class="col-3 align-self-center px-4">
+                                                                        <div class="row px-2">
+                                                                            <img src="image/om_surgeon1.png" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-8 align-self-center">
+                                                                        <div class="row">
+                                                                            <p>To help doctors provide independent remote medical
+                                                                                assistance
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--<<<>>>>>> end our_mission slider item  -->
+                                    <!-- <<<< start supported_param slider item  -->
+                                    <div class="item supported_param">
+                                            <div class="col-md-12">
+                                                <div class="row pt-2">
+                                                    <div class="col-4 main_slider_div my-4">
+                                                        <div class="row  pl-3">
+                                                            <h1 class="main_h1">
+                                                                <span>Supported </span>Parameters </h1>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-xl-10 my-4">
+                                                        <div class="row"> 
+                                                            <p class="main_paragraph">
+                                                                <b class="three_b">On the Mobile Health Station,</b> after user identification, <b class="three_b">up to 44 
+                                                                parametres can be measured in only 6 minutes</b>. The <b class="three_b">results</b> are 
+                                                                automatically recorded in the user’s account in the portal and <b class="three_b">provided 
+                                                                immediately via E-mail and SMS</b>.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+                                                                <div class="row justify-content-center pt-5">
+                                                                    <div class="sp_image">
+                                                                        <img src="image/sp_heart.png" alt="">
+                                                                    </div>
+                                                                    <p class="smple_par px-4">Cardiovascular system</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+                                                                <div class="row justify-content-center pt-5">
+                                                                    <div class="sp_image">
+                                                                        <img src="image/sp_monitor.png" alt="">
+                                                                    </div>
+                                                                    <p class="smple_par px-4">Blood glucose</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+                                                                <div class="row justify-content-center pt-5">
+                                                                    <div class="sp_image">
+                                                                        <img src="image/sp_cells.png" alt="">
+                                                                    </div>
+                                                                    <p class="smple_par px-1">Complote Blood count</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+                                                                <div class="row justify-content-center pt-5">
+                                                                    <div class="sp_image">
+                                                                        <img src="image/sp_kitchen.png" alt="">
+                                                                    </div>
+                                                                    <p class="smple_par px-4">Body analysis</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+                                                                <div class="row justify-content-center pt-5">
+                                                                    <div class="sp_image">
+                                                                        <img src="image/sp_plus.png" alt="">
+                                                                    </div>
+                                                                    <p class="smple_par px-4">Others</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--<<<>>>>>> end supported_param slider item  -->
+                                    
                                 </div>
                             </div>
                         </div>
