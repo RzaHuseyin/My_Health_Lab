@@ -28,14 +28,14 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
-$('.owl-carousel').on('mousewheel', '.owl-stage', function (e) {
-    if (e.deltaY > 0) {
-        $('.owl-carousel').trigger('next.owl');
-    } else {
-        $('.owl-carousel').trigger('prev.owl');
-    }
-    e.preventDefault();
-});
+// $('.owl-carousel').on('mousewheel', '.owl-stage', function (e) {
+//     if (e.deltaY > 0) {
+//         $('.owl-carousel').trigger('next.owl');
+//     } else {
+//         $('.owl-carousel').trigger('prev.owl');
+//     }
+//     e.preventDefault();
+// });
 
 
 AmCharts.makeChart("chartdiv",

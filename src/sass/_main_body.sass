@@ -14,13 +14,13 @@
     .owl-carousel
         .owl-dots
             position: absolute
-            right: -11.7%
-            top: 50%
+            right: -16.3%
+            top: 40%
             transform: rotate(90deg)
             .owl-dot.active
                 span
                     background-color: rgba(0, 179, 227, 0.8)
-        .doctor_benefits
+        .doctor_benefits , .user_benefits
             .circle_par
                 position: relative
                 &:before
@@ -38,6 +38,19 @@
                     font-weight: 800
                     letter-spacing: 0
                     z-index: 1
+            .user_par
+                height: 110px
+                border-radius: 5px
+                p
+                    text-align: center
+                    color: white
+                    font-weight: 700
+            .user_par_1
+                background-color: $greenA700
+            .user_par_2
+                background-color: $orange700
+            .user_par_3
+                background-color: $blue500
             .circle_par_1
                     &:before
                         background-color: $blue500
@@ -47,8 +60,10 @@
             .circle_par_3
                     &:before
                         background-color: $greenA700
-            .doctor_text
-                border-bottom: 3px solid rgb(131, 188, 0)
+            .user_text
+                min-height: percentage( 210px/ 368px)
+            .doctor_text, .user_text
+                border-bottom: 3px solid $blue500
                 overflow: hidden
                 height: percentage( 200px / 368px)
                 .smple_par
@@ -56,9 +71,9 @@
                     b
                         font-weight: 900
                         color: $color2 - 20
-            .doctor_text_2
+            .doctor_text_2, .user_text_2
                 border-bottom-color: $orange700
-            .doctor_text_3
+            .doctor_text_3, .user_text_1
                 border-bottom-color: $greenA700
         .our_mission
             .our_mission_div

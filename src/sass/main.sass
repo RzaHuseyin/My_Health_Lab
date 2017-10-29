@@ -1,6 +1,7 @@
 @import 'header'
 @import 'main_body'
 @import 'mixin'
+@import 'modal'
 
 
 
@@ -12,6 +13,8 @@
 *
     font-family: $font_familyMark
     transition: all  .3s ease  
+    &:focus
+        outline: none !important  
 body, html
     font-family: $font_familyMark   
     
@@ -37,11 +40,15 @@ body, html
 .smple_par
     @include text_style(16px, $font_familyMark, $color2, 500, 1.2) 
 
+#footer 
+    p  
+        @include text_style(14px, $font_familyMark, rgba(26, 26, 26, 0.902), 600, 1.2, -0.04em) 
 
 // *****************************************************************
 a
     &:hover
         text-decoration: none!important
+
 
 
     // /   ===>>              reset css 

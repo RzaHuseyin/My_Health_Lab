@@ -58,14 +58,76 @@
                     <div class="row ">
                         <div class="col-md-6 col-sm-6 col-6">
                             <div class="row justify-content-end">
-                                <a href="" class="fa fa_user">
-                                    <img src="image/fa-user.png" alt="sadasd"> Login</a>
+                                <button  type="button" class="fa fa_user" data-toggle="modal" data-target="#loginModal"><img src="image/fa-user.png" alt="sadasd"> Login</button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="col-12 pt-2">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <i class="fa fa-times" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body px-4">
+                                            <form class="form-horizontal" role="form" method="POST" action="/login">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="form-group row mb-0">
+                                                            <label for="cardNumber" class="col-sm-4 col-form-label">Card Number</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control" id="cardNumber" >
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label class="col-sm-12 label_between" for="">or</label>
+                                                </div>
+                                                <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-group row">
+                                                                <label for="citizenId" class="col-sm-4 col-form-label">Citizen id</label>
+                                                                <div class="col-sm-8">
+                                                                    <input type="text" class="form-control" id="citizenId" >
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="form-group row mb-0">
+                                                            <label for="inputPassword" class="col-sm-4 col-form-label">Password</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="password" class="form-control" id="inputPassword">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-end pr-3">
+                                                    <a class="btn_link" href="">Forgot Password?</a>
+                                                </div>
+                                                <div class="row py-2">
+                                                    <label for="" class="col-12">If you are a new user:</label>
+                                                </div>
+                                                <div class="row  justify-content-between pb-4 pt-2">
+                                                    <div class="col-sm-8 pr-3"> 
+                                                        <p>You need to get a health card from the mobile health station. To find your nearest mobile health station <a class="btn_link1" href="">please click</a></p>
+                                                    </div>
+                                                    <div class="col-sm-4 align-self-end d-flex pt-3">
+                                                        <button type="submit" class="btn btn-success col-sm-10 col-12 ml-auto"> Login</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <!-- end Modal -->
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6 col-6">
                             <div class="row justify-content-end">
-                                <a href="" class="fa fa_plus">
-                                    <img src="image/plas.png" alt=""> Register</a>
+                                <button class="fa fa_plus"><img src="image/plas.png" alt=""> Register</button>
                             </div>
                         </div>
                     </div>
@@ -129,7 +191,7 @@
                                         </div>
                                     </div>
                                     <!--<<<>>>>>> end general_health slider item  -->
-                                    
+
                                     <!-- <<<< start doctor_benefits slider item  -->
                                     <div class="item doctor_benefits">
                                         <div class="col-md-12">
@@ -284,64 +346,133 @@
                                     <!--<<<>>>>>> end our_mission slider item  -->
                                     <!-- <<<< start supported_param slider item  -->
                                     <div class="item supported_param">
-                                            <div class="col-md-12">
-                                                <div class="row pt-2">
-                                                    <div class="col-4 main_slider_div my-4">
-                                                        <div class="row  pl-3">
-                                                            <h1 class="main_h1">
-                                                                <span>Supported </span>Parameters </h1>
+                                        <div class="col-md-12">
+                                            <div class="row pt-2">
+                                                <div class="col-4 main_slider_div my-4">
+                                                    <div class="row  pl-3">
+                                                        <h1 class="main_h1">
+                                                            <span>Supported </span>Parameters </h1>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-xl-10 my-4">
+                                                    <div class="row">
+                                                        <p class="main_paragraph">
+                                                            <b class="three_b">On the Mobile Health Station,</b> after user identification,
+                                                            <b class="three_b">up to 44 parametres can be measured in only 6 minutes</b>. The
+                                                            <b class="three_b">results</b> are automatically recorded in the user’s account
+                                                            in the portal and
+                                                            <b class="three_b">provided immediately via E-mail and SMS</b>.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+                                                            <div class="row justify-content-center pt-5">
+                                                                <div class="sp_image">
+                                                                    <img src="image/sp_heart.png" alt="">
+                                                                </div>
+                                                                <p class="smple_par px-4">Cardiovascular system</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+                                                            <div class="row justify-content-center pt-5">
+                                                                <div class="sp_image">
+                                                                    <img src="image/sp_monitor.png" alt="">
+                                                                </div>
+                                                                <p class="smple_par px-4">Blood glucose</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+                                                            <div class="row justify-content-center pt-5">
+                                                                <div class="sp_image">
+                                                                    <img src="image/sp_cells.png" alt="">
+                                                                </div>
+                                                                <p class="smple_par px-1">Complote Blood count</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+                                                            <div class="row justify-content-center pt-5">
+                                                                <div class="sp_image">
+                                                                    <img src="image/sp_kitchen.png" alt="">
+                                                                </div>
+                                                                <p class="smple_par px-4">Body analysis</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+                                                            <div class="row justify-content-center pt-5">
+                                                                <div class="sp_image">
+                                                                    <img src="image/sp_plus.png" alt="">
+                                                                </div>
+                                                                <p class="smple_par px-4">Others</p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-xl-10 my-4">
-                                                        <div class="row"> 
-                                                            <p class="main_paragraph">
-                                                                <b class="three_b">On the Mobile Health Station,</b> after user identification, <b class="three_b">up to 44 
-                                                                parametres can be measured in only 6 minutes</b>. The <b class="three_b">results</b> are 
-                                                                automatically recorded in the user’s account in the portal and <b class="three_b">provided 
-                                                                immediately via E-mail and SMS</b>.
-                                                            </p>
-                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--<<<>>>>>> end supported_param slider item  -->
+                                    <div class="item user_benefits">
+                                        <div class="col-md-12">
+                                            <div class="row pt-2">
+                                                <div class="col-3 main_slider_div my-4">
+                                                    <div class="row pl-3">
+                                                        <h1 class="main_h1">
+                                                            <span>User</span> Benefits</h1>
                                                     </div>
-                                                    <div class="col-12">
-                                                        <div class="row">
-                                                            <div class="col-12 col-sm-6 col-md-4 col-xl-2">
-                                                                <div class="row justify-content-center pt-5">
-                                                                    <div class="sp_image">
-                                                                        <img src="image/sp_heart.png" alt="">
-                                                                    </div>
-                                                                    <p class="smple_par px-4">Cardiovascular system</p>
+                                                </div>
+                                                <div class="col-12 col-xl-10 mt-4">
+                                                    <div class="row">
+                                                        <p class="main_paragraph">
+                                                            <b class="three_b">Create</b> an online
+                                                            <b class="three_b">health account</b> in the portal
+                                                            <b class="three_b">to store personal medical records</b>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-11">
+                                                    <div class="row">
+                                                        <div class="col-xl-4 d-flex py-3">
+                                                            <div class="row mr-4 mt-1">
+                                                                <div class="user_par user_par_1 d-flex align-items-center px-3">
+                                                                    <p class="main_paragraph">Observe health trend</p>
+                                                                </div>
+                                                                <div class="user_text user_text_1 pb-5 pr-2">
+                                                                    <p class="smple_par">By accessing the Portal, the user may
+                                                                        <b>graphically observe</b>
+                                                                        the latest and previous
+                                                                        <b>health data trends, get recommendations</b>
+                                                                        on health parameters to be considered and get notification to visit a doctor for critical values.
+                                                                    </p>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-12 col-sm-6 col-md-4 col-xl-2">
-                                                                <div class="row justify-content-center pt-5">
-                                                                    <div class="sp_image">
-                                                                        <img src="image/sp_monitor.png" alt="">
-                                                                    </div>
-                                                                    <p class="smple_par px-4">Blood glucose</p>
+                                                        </div>
+                                                        <div class="col-xl-4 d-flex py-3">
+                                                            <div class="row mr-4 mt-1">
+                                                                <div class="user_par user_par_2 d-flex align-items-center px-3">
+                                                                    <p class="main_paragraph">Monitoring effectiveness of the treatment</p>
+                                                                </div>
+                                                                <div class="user_text user_text_2 pb-5 pr-2">
+                                                                    <p class="smple_par">User, who gets a treatment within the framework of the
+                                                                        system parameters, can perform regular measurements
+                                                                        and graphical
+                                                                        <b>monitor the impact of the treatment.</b>
+                                                                    </p>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-12 col-sm-6 col-md-4 col-xl-2">
-                                                                <div class="row justify-content-center pt-5">
-                                                                    <div class="sp_image">
-                                                                        <img src="image/sp_cells.png" alt="">
-                                                                    </div>
-                                                                    <p class="smple_par px-1">Complote Blood count</p>
+                                                        </div>
+                                                        <div class="col-xl-4 d-flex py-3">
+                                                            <div class="row mr-4 mt-1">
+                                                                <div class="user_par user_par_3 d-flex align-items-center px-3">
+                                                                    <p class="main_paragraph">Extend healthy life expectancy </p>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-12 col-sm-6 col-md-4 col-xl-2">
-                                                                <div class="row justify-content-center pt-5">
-                                                                    <div class="sp_image">
-                                                                        <img src="image/sp_kitchen.png" alt="">
-                                                                    </div>
-                                                                    <p class="smple_par px-4">Body analysis</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12 col-sm-6 col-md-4 col-xl-2">
-                                                                <div class="row justify-content-center pt-5">
-                                                                    <div class="sp_image">
-                                                                        <img src="image/sp_plus.png" alt="">
-                                                                    </div>
-                                                                    <p class="smple_par px-4">Others</p>
+                                                                <div class="user_text user_text_3 pb-5 pr-2">
+                                                                    <p class="smple_par">By obtaining detailed information about healthy lifestyle
+                                                                        from the portal and t aking early action against
+                                                                        any warnings, user may
+                                                                        <b>extend own Healthy Lifetime.</b>
+                                                                    </p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -349,8 +480,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!--<<<>>>>>> end supported_param slider item  -->
-                                    
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -361,6 +491,14 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="container">
+            <div class="row flex-column pb-4">
+                <p class="smple_par"> Copyright &copy; 2017</p>
+                <p class="smple_par">My Health Lab | All rights reserved</p>
             </div>
         </div>
     </section>
