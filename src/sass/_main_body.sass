@@ -1,6 +1,13 @@
 @import 'mixin'
 
 #main_body
+    .close_nav
+        span
+        color: white
+        font-size: 65px
+        font-weight: 400
+        opacity: 1
+        cursor: pointer
     .main_navbar
         ul  
             width: 100% 
@@ -100,6 +107,10 @@
             .smple_par
                 text-align: center
                 padding: 0 14px
-
-
-            
+    .active_nav
+        transform: translateX(0)
+        opacity: 1
+    .deactive_nav
+        transform: translateX(-100%)
+        opacity: 0
+    

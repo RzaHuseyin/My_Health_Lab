@@ -32,8 +32,8 @@
 
     <section id="header">
         <div class="container">
-            <div class="row justify-content-end pt-4 pb-1">
-                <ul class="fa fa-caret-down pr-3">
+            <div class="row justify-content-end pt-4 pb-sm-1 pb-4 height_lang">
+                <ul class="fa fa-caret-down d-sm-flex d-none pr-3">
                     <li class="az_lan"></li>
                     <li class="en_lan"></li>
                     <li class="ru_lan"></li>
@@ -42,96 +42,108 @@
             <div class="row justify-content-between">
                 <div class="col-lg-2 col-md-6 col-sm-6">
                     <div class="row">
-                        <div class="col-lg-5 col-md-6">
-                            <div class="row">
-                                <img src="image/logo1.png" alt="logo" class="img-fluid">
+                        <div class="col-5 d-sm-none d-blok align-self-center pl-4">
+                            <div class="row pl-4">
+                                <i class="fa fa-bars js_open_nav" aria-hidden="true"></i>
                             </div>
                         </div>
-                        <div class="col-lg-6  col-md-6 d-flex align-items-stretch pl-4">
+                        <div class="col-lg-5 col-sm-3 col-6">
+                            <div class="row pl-2 pl-sm-0">
+                                <a href="index.html"><img src="image/logo1.png" alt="logo"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6  col-3 d-sm-flex d-none align-items-stretch pl-4">
                             <div class="row align-items-center pr-2">
                                 <h3>My Health Lab</h3>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3  col-md-4 col-sm-6 align-self-center">
-                    <div class="row ">
+                <div class="col-lg-3  col-md-4 col-sm-6 align-self-center d-sm-block d-none">
+                    <div class="row">
                         <div class="col-md-6 col-sm-6 col-6">
                             <div class="row justify-content-end">
-                                <button  type="button" class="fa fa_user" data-toggle="modal" data-target="#loginModal"><img src="image/fa-user.png" alt="sadasd"> Login</button>
-                                <!-- Modal -->
-                                <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="col-12 pt-2">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <i class="fa fa-times" aria-hidden="true"></i>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body px-4">
-                                            <form class="form-horizontal" role="form" method="POST" action="/login">
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="form-group row mb-0">
-                                                            <label for="cardNumber" class="col-sm-4 col-form-label">Card Number</label>
-                                                            <div class="col-sm-8">
-                                                                <input type="text" class="form-control" id="cardNumber" >
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <label class="col-sm-12 label_between" for="">or</label>
-                                                </div>
-                                                <div class="row">
-                                                        <div class="col-12">
-                                                            <div class="form-group row">
-                                                                <label for="citizenId" class="col-sm-4 col-form-label">Citizen id</label>
-                                                                <div class="col-sm-8">
-                                                                    <input type="text" class="form-control" id="citizenId" >
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="form-group row mb-0">
-                                                            <label for="inputPassword" class="col-sm-4 col-form-label">Password</label>
-                                                            <div class="col-sm-8">
-                                                                <input type="password" class="form-control" id="inputPassword">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row justify-content-end pr-3">
-                                                    <a class="btn_link" href="">Forgot Password?</a>
-                                                </div>
-                                                <div class="row py-2">
-                                                    <label for="" class="col-12">If you are a new user:</label>
-                                                </div>
-                                                <div class="row  justify-content-between pb-4 pt-2">
-                                                    <div class="col-sm-8 pr-3"> 
-                                                        <p>You need to get a health card from the mobile health station. To find your nearest mobile health station <a class="btn_link1" href="">please click</a></p>
-                                                    </div>
-                                                    <div class="col-sm-4 align-self-end d-flex pt-3">
-                                                        <button type="submit" class="btn btn-success col-sm-10 col-12 ml-auto"> Login</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                <!-- end Modal -->
+                                <button type="button" class="fa fa_user" data-toggle="modal" data-target="#loginModal">
+                                    <img src="image/fa-user.png" alt="sadasd"> Login</button>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6 col-6">
                             <div class="row justify-content-end">
-                                <button class="fa fa_plus"><img src="image/plas.png" alt=""> Register</button>
+                                <a href="register.html">
+                                    <button class="fa fa_plus pr-0">
+                                        <img src="image/plas.png" alt=""> Register</button>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Modal for login -->
+                <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="col-12 pt-2">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <form class="form-horizontal" role="form" method="POST" action="/login">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group row mb-0">
+                                                <label for="cardNumber" class="col-sm-4 col-form-label">Card Number</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" id="cardNumber">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-sm-12 label_between" for="">or</label>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group row">
+                                                <label for="citizenId" class="col-sm-4 col-form-label">Citizen id</label>
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" id="citizenId">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group row mb-0">
+                                                <label for="inputPassword" class="col-sm-4 col-form-label">Password</label>
+                                                <div class="col-sm-8">
+                                                    <input type="password" class="form-control" id="inputPassword">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-end pr-3">
+                                        <a class="btn_link" href="">Forgot Password?</a>
+                                    </div>
+                                    <div class="row py-2">
+                                        <label for="" class="col-12">If you are a new user:</label>
+                                    </div>
+                                    <div class="row  justify-content-between pb-4 pt-2">
+                                        <div class="col-sm-8 pr-3">
+                                            <p>You need to get a health card from the mobile health station. To find your nearest
+                                                mobile health station
+                                                <a class="btn_link1" href="">please click</a>
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-4 align-self-end d-flex pt-3">
+                                            <button type="submit" class="btn btn-success col-sm-10 col-12 ml-auto"> Login</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end Modal -->
             </div>
         </div>
     </section>
@@ -139,13 +151,32 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-2 main_navbar">
-                    <div class="row py-4 my-5">
+                    <div class="row d-sm-none d-flex justify-content-end pr-5 pt-5">
+                        <button type="button" class="close close_nav js_close_nav" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="row py-4 my-sm-5">
                         <ul class="py-3">
                             <li class="">Home</li>
                             <li class="">Locations</li>
                             <li class="">Products</li>
                             <li class="">Contacts</li>
                         </ul>
+                        <div class="col-12 d-sm-none d-flex justify-content-center">
+                            <div class="row">
+                                <button type="button" class="fa fa_user" data-toggle="modal" data-target="#loginModal">
+                                    <img src="image/fa-user.png" alt="sadasd"> Login</button>
+                            </div>
+                        </div>
+                        <div class="col-12 d-sm-none d-flex justify-content-center">
+                            <div class="row">
+                                <a href="register.html">
+                                    <button class="fa fa_plus">
+                                        <img src="image/plas.png" alt=""> Register</button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-10">
@@ -344,6 +375,7 @@
                                         </div>
                                     </div>
                                     <!--<<<>>>>>> end our_mission slider item  -->
+
                                     <!-- <<<< start supported_param slider item  -->
                                     <div class="item supported_param">
                                         <div class="col-md-12">
@@ -367,7 +399,7 @@
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="row">
-                                                        <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+                                                        <div class="col-12 col-sm-4 col-xl-2">
                                                             <div class="row justify-content-center pt-5">
                                                                 <div class="sp_image">
                                                                     <img src="image/sp_heart.png" alt="">
@@ -375,7 +407,7 @@
                                                                 <p class="smple_par px-4">Cardiovascular system</p>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+                                                        <div class="col-12 col-sm-4 col-xl-2">
                                                             <div class="row justify-content-center pt-5">
                                                                 <div class="sp_image">
                                                                     <img src="image/sp_monitor.png" alt="">
@@ -383,7 +415,7 @@
                                                                 <p class="smple_par px-4">Blood glucose</p>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+                                                        <div class="col-12 col-sm-4 col-xl-2">
                                                             <div class="row justify-content-center pt-5">
                                                                 <div class="sp_image">
                                                                     <img src="image/sp_cells.png" alt="">
@@ -391,7 +423,7 @@
                                                                 <p class="smple_par px-1">Complote Blood count</p>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+                                                        <div class="col-12 col-sm-6 col-xl-2">
                                                             <div class="row justify-content-center pt-5">
                                                                 <div class="sp_image">
                                                                     <img src="image/sp_kitchen.png" alt="">
@@ -399,7 +431,7 @@
                                                                 <p class="smple_par px-4">Body analysis</p>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-sm-6 col-md-4 col-xl-2">
+                                                        <div class="col-12 col-sm-6 col-xl-2">
                                                             <div class="row justify-content-center pt-5">
                                                                 <div class="sp_image">
                                                                     <img src="image/sp_plus.png" alt="">
@@ -413,6 +445,8 @@
                                         </div>
                                     </div>
                                     <!--<<<>>>>>> end supported_param slider item  -->
+
+                                    <!-- <<<< start user_benefits slider item  -->
                                     <div class="item user_benefits">
                                         <div class="col-md-12">
                                             <div class="row pt-2">
@@ -481,6 +515,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!--<<<>>>>>> end user_benefits slider item  -->
                                 </div>
                             </div>
                         </div>

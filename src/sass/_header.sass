@@ -2,6 +2,13 @@
 
 #header
     font-family: $font_familyMark
+    .height_lang
+        height: auto
+    .fa-bars
+        font-size: 40px
+        font-weight: 100
+        color: $greenA400
+    
     ul
         position: relative
         &:before
@@ -24,17 +31,19 @@
             display: none
     h3 
         @include text_style(18px, $font_familyRoboto, $greey800 - 20, 900, 1.15, 0.03em) 
-    button.fa
-        @include text_style(16px, $font_familyMark, $greey800, 900, 1.875) 
-        text-transform: uppercase
-        position: relative 
-        border: none
-        background-color: transparent
-        img  
-            position: absolute
-            left: -22px
-            top: 4px
+button.fa
+    @include text_style(16px, $font_familyMark, $greey800, 900, 1.875) 
+    text-transform: uppercase
+    position: relative 
+    border: none
+    background-color: transparent
+    cursor: pointer
+
+    img  
+        position: absolute
+        left: -22px
+        top: 5px
    
-    button.fa_plus 
-        color: $greenA400
+button.fa_plus 
+    color: $greenA400
 
