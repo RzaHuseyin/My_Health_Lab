@@ -1,13 +1,48 @@
-@media screen and (max-width: 576px) 
-
-    .main_navbar
-        position: absolute
-        background: $greenA400
-        height: 100vh
-        width: 61vw
-        top: 0
-        z-index: 999
-        transform: translateX(-100%)
-
+@media screen and (max-width: 575px) 
+    #main_body
+        .main_navbar
+            position: absolute
+            background: $greenA400
+            height: 100vh
+            width: 61vw
+            top: 0
+            z-index: 999
+            transform: translateX(-100%)
+            ul  
+                li
+                    a 
+                        @include text_style(19px, $font_familyMark, white, 900,  1.55, -0.04em ) 
+                        &:hover
+                            color: $greenA400 + 50
+            .bg_log_mobile
+                background: $greenA400 - 20
+            
+            .fa
+                color: white
+                &:hover
+                    color: white - 40
     
-    
+        .main_slider_div
+            border: 0 
+        .owl-carousel
+            .general_health
+                .main_paragraph
+                    font-size: 20px
+            .doctor_benefits
+                .main_paragraph
+                    font-size: 20px
+                .circle_par
+                    &:before
+                        width: 50px
+                        height: 50px
+                        top: -6px
+                        left: 0
+                .doctor_text
+                    border: 0
+                .doctor_text, .user_text
+                    height: auto
+            .our_mission
+                .our_mission_div
+                    height: 160px
+                    p  
+                        font-size: 15px

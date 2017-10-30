@@ -1,15 +1,14 @@
 
 $(".js_open_nav").click(function(){
     $(".main_navbar").addClass("active_nav")
-    .removeClass("deactive_nav")
-    .fadeIn()
+        .removeClass("deactive_nav")
     
 });
 $(".js_close_nav").click(function(){
     $(".main_navbar").addClass("deactive_nav")
-    $(".main_navbar").fadeOut()
-    $(".main_navbar").removeClass("active_nav")
+        .removeClass("active_nav")
 });
+
 
 $('.owl-carousel').owlCarousel({
     loop: true,

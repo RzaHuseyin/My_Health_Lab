@@ -10,14 +10,17 @@
         cursor: pointer
     .main_navbar
         ul  
-            width: 100% 
-            li 
-                @include text_style(16px, $font_familyMark, $color1, 900,  1.875, -0.04em ) 
-                text-transform: uppercase
-                cursor: pointer
-                width: 100%
-                &:hover
-                    color: $greenA400
+            li
+                a 
+                    @include text_style(16px, $font_familyMark, $color1, 900,  1.875, -0.04em ) 
+                    &:hover
+                        color: $greenA400
+    .active_nav
+        transform: translateX(0) !important
+        opacity: 1
+    .deactive_nav
+        transform: translateX(-100%)
+        opacity: 0
     .owl-carousel
         .owl-dots
             position: absolute
@@ -43,7 +46,7 @@
                 .main_paragraph
                     position: relative
                     font-weight: 800
-                    letter-spacing: 0
+                    letter-spacing: -0.03em
                     z-index: 1
             .user_par
                 height: 110px
@@ -107,10 +110,5 @@
             .smple_par
                 text-align: center
                 padding: 0 14px
-    .active_nav
-        transform: translateX(0)
-        opacity: 1
-    .deactive_nav
-        transform: translateX(-100%)
-        opacity: 0
+    
     
