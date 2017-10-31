@@ -49,7 +49,9 @@
                         </div>
                         <div class="col-lg-5 col-sm-3 col-6">
                             <div class="row pl-2 pl-sm-0">
-                                <a href="index.html"><img src="image/logo1.png" alt="logo"></a>
+                                <a href="index.html">
+                                    <img src="image/logo1.png" alt="logo">
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-6  col-3 d-sm-flex d-none align-items-stretch pl-4">
@@ -63,7 +65,7 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-6">
                             <div class="row justify-content-end">
-                                <button type="button" class="fa fa_user" data-toggle="modal" data-target="#loginModal">
+                                <button type="button" class="fa fa_user js_log_modal" data-toggle="modal" data-target="#commonModal">
                                     <img src="image/fa-user.png" alt="sadasd"> Login</button>
                             </div>
                         </div>
@@ -77,73 +79,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Modal for login -->
-                <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="col-12 pt-2">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <i class="fa fa-times" aria-hidden="true"></i>
-                                </button>
-                            </div>
-                            <div class="modal-body px-4">
-                                <form class="form-horizontal" role="form" method="POST" action="/login">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="form-group row mb-0">
-                                                <label for="cardNumber" class="col-sm-4 col-form-label">Card Number</label>
-                                                <div class="col-sm-8">
-                                                    <input type="text" class="form-control" id="cardNumber">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-sm-12 label_between" for="">or</label>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="form-group row">
-                                                <label for="citizenId" class="col-sm-4 col-form-label">Citizen id</label>
-                                                <div class="col-sm-8">
-                                                    <input type="text" class="form-control" id="citizenId">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="form-group row mb-0">
-                                                <label for="inputPassword" class="col-sm-4 col-form-label">Password</label>
-                                                <div class="col-sm-8">
-                                                    <input type="password" class="form-control" id="inputPassword">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-end pr-3">
-                                        <a class="btn_link" href="">Forgot Password?</a>
-                                    </div>
-                                    <div class="row py-2">
-                                        <label for="" class="col-12">If you are a new user:</label>
-                                    </div>
-                                    <div class="row  justify-content-between pb-4 pt-2">
-                                        <div class="col-sm-8 pr-3">
-                                            <p>You need to get a health card from the mobile health station. To find your nearest
-                                                mobile health station
-                                                <a class="btn_link1" href="">please click</a>
-                                            </p>
-                                        </div>
-                                        <div class="col-sm-4 align-self-end d-flex pt-3">
-                                            <button type="submit" class="btn btn-success col-sm-10 col-12 ml-auto"> Login</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end Modal -->
+               
             </div>
         </div>
     </section>
@@ -158,16 +94,24 @@
                     </div>
                     <div class="row py-3 my-sm-5">
                         <ul class="py-0 py-sm-3 w-100">
-                            <li class="pt-3 pb-4 pl-4 w-75 mx-auto ml-sm-0 p-sm-0"><a href="" class="text-uppercase">Home</a></li> 
-                            <li class="pt-3 pb-4 pl-4 w-75 mx-auto ml-sm-0 p-sm-0"><a href="" class="text-uppercase">Locations</a></li> 
-                            <li class="pt-3 pb-4 pl-4 w-75 mx-auto ml-sm-0 p-sm-0"><a href="" class="text-uppercase">Products</a></li> 
-                            <li class="pt-3 pb-4 pl-4 w-75 mx-auto ml-sm-0 p-sm-0"><a href="" class="text-uppercase">Contacts</a></li> 
+                            <li class="pt-3 pb-4 pl-4 w-75 mx-auto ml-sm-0 p-sm-0">
+                                <a href="" class="text-uppercase">Home</a>
+                            </li>
+                            <li class="pt-3 pb-4 pl-4 w-75 mx-auto ml-sm-0 p-sm-0">
+                                <a href="" class="text-uppercase">Locations</a>
+                            </li>
+                            <li class="pt-3 pb-4 pl-4 w-75 mx-auto ml-sm-0 p-sm-0">
+                                <a href="" class="text-uppercase">Products</a>
+                            </li>
+                            <li class="pt-3 pb-4 pl-4 w-75 mx-auto ml-sm-0 p-sm-0">
+                                <a href="" class="text-uppercase">Contacts</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="row mt-auto">
                         <div class="col-12 d-sm-none d-block">
                             <div class="row bg_log_mobile py-1">
-                                <button type="button" class="fa fa_user mx-auto" data-toggle="modal" data-target="#loginModal">
+                                <button type="button" class="fa fa_user mx-auto js_log_modal" data-toggle="modal" data-target="#commonModal">
                                     <img src="image/fa-user.png" alt="sadasd"> Login</button>
                             </div>
                         </div>
@@ -234,7 +178,7 @@
 
                                     <!-- <<<< start doctor_benefits slider item  -->
                                     <div class="item doctor_benefits">
-                                        <div class="col-md-12 px-4 px-2">
+                                        <div class="col-md-12 px-4 px-sm-2">
                                             <div class="row pt-2 px-5 px-sm-2">
                                                 <div class="col-12 col-sm-4 mx-auto ml-sm-0 my-0 my-sm-4 main_slider_div ">
                                                     <div class="row pl-3 my-4 pt-5 pb-4 py-sm-0  my-sm-0 justify-content-center">
@@ -307,8 +251,8 @@
                                     <div class="item our_mission">
                                         <div class="col-md-12">
                                             <div class="row pt-2">
-                                                <div class="col-6 mx-auto ml-sm-0 col-sm-4 main_slider_div my-4 py-5 py-sm-0">
-                                                    <div class="row pl-3 mb-5">
+                                                <div class="col-6 col-sm-4 my-4 mx-auto py-5 ml-sm-0 py-sm-0 main_slider_div">
+                                                    <div class="row pl-3 mb-5 mb-sm-0">
                                                         <h1 class="main_h1 text-center text-sm-left">
                                                             <span>Our Mission </span>Through this platform</h1>
                                                     </div>
@@ -318,8 +262,8 @@
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="row pt-0 pt-sm-4 justify-content-center">
-                                                        <div class="col-5 col-sm-12 col-xl-6 py-4 pr-4">
-                                                            <div class="row our_mission_div our_mission_div1 mr-4">
+                                                        <div class="col-5 col-sm-12 col-xl-6 py-4 pr-4 pl-2 pl-sm-0">
+                                                            <div class="row our_mission_div our_mission_div1 mx-2 ml-sm-auto mr-sm-4">
                                                                 <div class="col-7 col-sm-3 pt-2 py-sm-0 align-self-center px-4 mx-auto mx-sm-0">
                                                                     <div class="row px-2">
                                                                         <img src="image/om_health_care.png" class="img-fluid mx-auto mx-sm-0" alt="">
@@ -332,8 +276,8 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-5 col-sm-12 col-xl-6 py-4 pr-4">
-                                                            <div class="row our_mission_div our_mission_div2 mr-4">
+                                                        <div class="col-5 col-sm-12 col-xl-6 py-4 pr-4 pl-2 pl-sm-0">
+                                                            <div class="row our_mission_div our_mission_div2 mx-2 ml-sm-auto mr-sm-4">
                                                                 <div class="col-7 col-sm-3 pt-2 py-sm-0 align-self-center px-4 mx-auto mx-sm-0">
                                                                     <div class="row px-2">
                                                                         <img src="image/om_band_aid1.png" class="img-fluid mx-auto mx-sm-0" alt="">
@@ -346,8 +290,8 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-5 col-sm-12 col-xl-6 py-4 pr-4">
-                                                            <div class="row our_mission_div our_mission_div3 mr-4">
+                                                        <div class="col-5 col-sm-12 col-xl-6 py-4 pr-4 pl-2 pl-sm-0">
+                                                            <div class="row our_mission_div our_mission_div3 mx-2 ml-sm-auto mr-sm-4">
                                                                 <div class="col-7 col-sm-3 pt-2 py-sm-0 align-self-center px-4 mx-auto mx-sm-0">
                                                                     <div class="row px-2">
                                                                         <img src="image/om_first_aid_kit1.png" class="img-fluid mx-auto mx-sm-0" alt="">
@@ -360,8 +304,8 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-5 col-sm-12 col-xl-6 py-4 pr-4">
-                                                            <div class="row our_mission_div our_mission_div4 mr-4">
+                                                        <div class="col-5 col-sm-12 col-xl-6 py-4 pr-4 pl-2 pl-sm-0">
+                                                            <div class="row our_mission_div our_mission_div4 mx-2 ml-sm-auto mr-sm-4">
                                                                 <div class="col-7 col-sm-3 pt-2 py-sm-0 align-self-center px-4 mx-auto mx-sm-0">
                                                                     <div class="row px-2">
                                                                         <img src="image/om_surgeon1.png" class="img-fluid mx-auto mx-sm-0" alt="">
@@ -387,8 +331,8 @@
                                     <div class="item supported_param">
                                         <div class="col-md-12">
                                             <div class="row pt-2">
-                                                <div class="col-6 mx-auto ml-sm-0 col-sm-4 main_slider_div my-4 py-5 py-sm-0">
-                                                    <div class="row pl-3">
+                                                <div class="col-9 col-sm-4 my-4 mx-auto pt-5 ml-sm-0 pt-sm-0 main_slider_div">
+                                                    <div class="row pl-3 mb-5 mb-sm-0">
                                                         <h1 class="main_h1 text-center text-sm-left">
                                                             <span>Supported </span>Parameters </h1>
                                                     </div>
@@ -397,7 +341,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-xl-10 my-4">
-                                                    <div class="row">
+                                                    <div class="row px-5 px-sm-0">
                                                         <p class="main_paragraph">
                                                             <b class="three_b">On the Mobile Health Station,</b> after user identification,
                                                             <b class="three_b">up to 44 parametres can be measured in only 6 minutes</b>. The
@@ -408,45 +352,45 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
-                                                    <div class="row">
-                                                        <div class="col-12 col-sm-4 col-xl-2">
+                                                    <div class="row px-5 px-sm-0 justify-content-center justify-content-xl-start">
+                                                        <div class="col-4 col-xl-2 js_sup_modal" data-toggle="modal" data-target="#commonModal">
                                                             <div class="row justify-content-center pt-5">
                                                                 <div class="sp_image">
                                                                     <img src="image/sp_heart.png" alt="">
                                                                 </div>
-                                                                <p class="smple_par px-4">Cardiovascular system</p>
+                                                                <p class="smple_par col-12 px-4">Cardiovascular system</p>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-sm-4 col-xl-2">
+                                                        <div class="col-4 col-xl-2 js_sup_modal" data-toggle="modal" data-target="#commonModal">
                                                             <div class="row justify-content-center pt-5">
                                                                 <div class="sp_image">
                                                                     <img src="image/sp_monitor.png" alt="">
                                                                 </div>
-                                                                <p class="smple_par px-4">Blood glucose</p>
+                                                                <p class="smple_par col-12 px-4">Blood glucose</p>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-sm-4 col-xl-2">
+                                                        <div class="col-4 col-xl-2 js_sup_modal" data-toggle="modal" data-target="#commonModal">
                                                             <div class="row justify-content-center pt-5">
                                                                 <div class="sp_image">
                                                                     <img src="image/sp_cells.png" alt="">
                                                                 </div>
-                                                                <p class="smple_par px-1">Complote Blood count</p>
+                                                                <p class="smple_par col-12 px-1">Complote Blood count</p>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-sm-6 col-xl-2">
+                                                        <div class="col-4 col-xl-2 js_sup_modal" data-toggle="modal" data-target="#commonModal">
                                                             <div class="row justify-content-center pt-5">
                                                                 <div class="sp_image">
                                                                     <img src="image/sp_kitchen.png" alt="">
                                                                 </div>
-                                                                <p class="smple_par px-4">Body analysis</p>
+                                                                <p class="smple_par col-12 px-4">Body analysis</p>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-sm-6 col-xl-2">
+                                                        <div class="col-4 col-xl-2 js_sup_modal" data-toggle="modal" data-target="#commonModal">
                                                             <div class="row justify-content-center pt-5">
                                                                 <div class="sp_image">
                                                                     <img src="image/sp_plus.png" alt="">
                                                                 </div>
-                                                                <p class="smple_par px-4">Others</p>
+                                                                <p class="smple_par col-12 px-4">Others</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -460,8 +404,8 @@
                                     <div class="item user_benefits">
                                         <div class="col-md-12">
                                             <div class="row pt-2">
-                                                <div class="col-6 mx-auto ml-sm-0 col-sm-4 main_slider_div my-4 py-5 py-sm-0">
-                                                    <div class="row pl-3">
+                                                <div class="col-6 mx-auto ml-sm-0 col-sm-3 main_slider_div my-4 pt-5 pt-sm-0">
+                                                    <div class="row pl-3 mb-5 mb-sm-0">
                                                         <h1 class="main_h1 text-center text-sm-left">
                                                             <span>User</span> Benefits</h1>
                                                     </div>
@@ -469,8 +413,8 @@
                                                         <div class="header_line "></div>
                                                     </div>
                                                 </div>
-                                                <div class="col-12 col-xl-10 mt-4">
-                                                    <div class="row">
+                                                <div class="col-12 col-xl-10 mt-4 mb-4 mb-sm-0">
+                                                    <div class="row px-5 px-sm-0">
                                                         <p class="main_paragraph">
                                                             <b class="three_b">Create</b> an online
                                                             <b class="three_b">health account</b> in the portal
@@ -478,11 +422,11 @@
                                                         </p>
                                                     </div>
                                                 </div>
-                                                <div class="col-11">
-                                                    <div class="row">
+                                                <div class="col-12 col-xl-11">
+                                                    <div class="row px-5 px-sm-0">
                                                         <div class="col-xl-4 d-flex py-3">
-                                                            <div class="row mr-4 mt-1">
-                                                                <div class="user_par user_par_1 d-flex align-items-center px-3">
+                                                            <div class="row mr-0 mr-sm-4">
+                                                                <div class="user_par user_par_1 w-100 d-flex align-items-center justify-content-center px-0 py-2 mb-3 mb-sm-0 px-sm-3">
                                                                     <p class="main_paragraph">Observe health trend</p>
                                                                 </div>
                                                                 <div class="user_text user_text_1 pb-5 pr-2">
@@ -496,8 +440,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-xl-4 d-flex py-3">
-                                                            <div class="row mr-4 mt-1">
-                                                                <div class="user_par user_par_2 d-flex align-items-center px-3">
+                                                            <div class="row mr-0 mr-sm-4">
+                                                                <div class="user_par user_par_2 w-100 d-flex align-items-center justify-content-center px-0 py-2 mb-3 mb-sm-0 px-sm-3">
                                                                     <p class="main_paragraph">Monitoring effectiveness of the treatment</p>
                                                                 </div>
                                                                 <div class="user_text user_text_2 pb-5 pr-2">
@@ -510,8 +454,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-xl-4 d-flex py-3">
-                                                            <div class="row mr-4 mt-1">
-                                                                <div class="user_par user_par_3 d-flex align-items-center px-3">
+                                                            <div class="row mr-0 mr-sm-4">
+                                                                <div class="user_par user_par_3 w-100 d-flex align-items-center justify-content-center px-0 py-2 mb-3 mb-sm-0 px-sm-3">
                                                                     <p class="main_paragraph">Extend healthy life expectancy </p>
                                                                 </div>
                                                                 <div class="user_text user_text_3 pb-5 pr-2">
@@ -544,14 +488,116 @@
     </section>
     <section id="footer">
         <div class="container">
-            <div class="row flex-column pb-4">
+            <div class="row flex-column py-4 align-items-center align-items-md-start">
                 <p class="smple_par"> Copyright &copy; 2017</p>
                 <p class="smple_par">My Health Lab | All rights reserved</p>
             </div>
         </div>
     </section>
 
-
+ <!-- Modal for login and supported parameters -->
+ <div class="modal fade" id="commonModal" tabindex="-1" role="dialog" aria-labelledby="commonModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content login">
+            <div class="col-12 pt-2">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body px-4">
+                <form class="form-horizontal" role="form" method="POST" action="/login">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group row mb-0">
+                                <label for="cardNumber" class="col-sm-4 col-form-label">Card Number</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="cardNumber">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="col-sm-12 label_between" for="">or</label>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group row">
+                                <label for="citizenId" class="col-sm-4 col-form-label">Citizen id</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="citizenId">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group row mb-0">
+                                <label for="inputPassword" class="col-sm-4 col-form-label">Password</label>
+                                <div class="col-sm-8">
+                                    <input type="password" class="form-control" id="inputPassword">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-end pr-3">
+                        <a class="btn_link" href="">Forgot Password?</a>
+                    </div>
+                    <div class="row py-2">
+                        <label for="" class="col-12">If you are a new user:</label>
+                    </div>
+                    <div class="row  justify-content-between pb-4 pt-2">
+                        <div class="col-sm-8 pr-3">
+                            <p>You need to get a health card from the mobile health station. To find your nearest
+                                mobile health station
+                                <a class="btn_link1" href="">please click</a>
+                            </p>
+                        </div>
+                        <div class="col-sm-4 align-self-end d-flex pt-3">
+                            <button type="submit" class="btn btn-success col-sm-10 col-12 ml-auto"> Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-content support">
+            <div class="modal-body px-4">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12 col-md-4 d-flex">
+                            <img src="image/sp_heart.png" class="mx-auto" alt="">
+                        </div>
+                        <div class="col-12 col-md-6 d-flex align-self-center">
+                            <p class="smple_par text-center text-md-left">Parameters related to the <b class="two_b">cardiovascular system</b></p>
+                        </div>
+                        <ul class="list_supported ml-5">
+                            <li class="fa fa-check d-block">"Highest" Pressure (Systolic)</li>
+                            <li class="fa fa-check d-block">"Lowest" Pressure (Diastolic)</li>
+                            <li class="fa fa-check d-block">Pulse Pressure</li>
+                            <li class="fa fa-check d-block">Pulse</li>
+                            <li class="fa fa-check d-block">Mean Arterial Pressure</li>
+                            <li class="fa fa-check d-block">Arrhythmia</li>
+                            <li class="fa fa-check d-block">Total Cholesterol (TC)</li>
+                            <li class="fa fa-check d-block">"Good" Cholesterol (HDL)</li>
+                            <li class="fa fa-check d-block">"Bad" Cholesterol (LDL)</li>
+                            <li class="fa fa-check d-block">Triglyceride</li>
+                            <li class="fa fa-check d-block">VLDL</li>
+                            <li class="fa fa-check d-block">TC/HDL Ratio</li>
+                            <li class="fa fa-check d-block">Non-HDL</li>
+                            <li class="fa fa-check d-block">LDL/HDL Ratio</li>
+                            <li class="fa fa-check d-block"><b>10-Years Risk of Cardiovascular Diseases</b></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 pt-2 d-block d-md-none">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-angle-left" aria-hidden="true">Back</i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end Modal -->
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>

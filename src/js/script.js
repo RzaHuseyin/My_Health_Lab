@@ -8,7 +8,13 @@ $(".js_close_nav").click(function(){
     $(".main_navbar").addClass("deactive_nav")
         .removeClass("active_nav")
 });
-
+// modal login and supported    main bage
+$(".js_log_modal").click(function () {
+    $("#commonModal").removeClass("supportModal").addClass("loginModal")
+})
+$(".js_sup_modal").click(function () {
+    $("#commonModal").removeClass("loginModal").addClass("supportModal")
+})
 
 $('.owl-carousel').owlCarousel({
     loop: true,
@@ -17,6 +23,7 @@ $('.owl-carousel').owlCarousel({
     item: 1,
     dots: true,
     margin: 10,
+    mouseDrag: false,
     animateOut: 'slideOutUp',
     animateIn: 'slideInUp',
     autoplay: true,
@@ -27,13 +34,14 @@ $('.owl-carousel').owlCarousel({
         0: {
             items: 1,
             nav: false,
-            dots: false
-
+            dots: false,
+            mouseDrag: true
         },
         600: {
             items: 1,
             nav: false,
-            dots: false
+            dots: false,
+            mouseDrag: true
         },
         1000: {
             items: 1

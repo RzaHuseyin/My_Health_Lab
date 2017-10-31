@@ -1,10 +1,12 @@
 @import 'mixin'
 
-#loginModal
+.loginModal
     .modal-dialog
         max-width: 570px
         margin: 10% auto
-        .modal-content
+        .modal-content.support
+            display: none
+        .modal-content.login
             border-radius: 5px
             background-color: rgb(8, 164, 231)
             box-shadow: 0px 20px 40px 0px $shadow
@@ -38,12 +40,34 @@
             .btn_link1
                 @extend .btn_link
                 text-decoration: underline
-
-
- 
-
-
-
-                
-                    
-
+        .modal-content.support
+            // background: red
+.supportModal
+    .modal-dialog
+        max-width: 370px
+        margin: 10% auto
+        .modal-content.login
+            display: none
+        .modal-content.support
+            box-shadow: 0px 20px 40px 0px $shadow
+            .list_supported
+                li
+                    @include text_style(16px, $font_familyMark, $color1, 400, 1.2, -0.04em) 
+                    position: relative
+                    &:before
+                        position: absolute
+                        top: 0
+                        left: -20px
+                        margin-right: 10px
+                        font-size: 15px
+                        font-family: fontAwesome
+                    b  
+                        font-weight: 600
+            i   
+                position: absolute
+                top: 20px
+                right: 10px
+                @include text_style(18px, $font_familyMark, black, 800, 1.2, -0.04em) 
+                &:before
+                    margin-right: 10px
+                    font-family: fontAwesome
