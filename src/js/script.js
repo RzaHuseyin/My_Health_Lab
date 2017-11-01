@@ -102,3 +102,6 @@ AmCharts.makeChart("chartdiv",
     ]
 }
 );
+
+//location  page 
+
