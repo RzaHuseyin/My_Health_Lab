@@ -3,6 +3,9 @@
 @import 'main_body'
 @import 'register'
 @import 'location'
+@import 'product'
+@import 'login'
+@import 'admin'
 @import 'modal'
 
 
@@ -53,6 +56,21 @@ body, html
 #footer 
     p  
         @include text_style(14px, $font_familyMark, rgba(26, 26, 26, 0.902), 600, 1.2, -0.04em) 
+.js_button
+    @include text_style(18px, $font_familyMark, $greenA400, 600, 1, -0.04em) 
+    border: 2px solid $greenA400
+    border-radius: 5px
+    width: 170px
+    cursor: pointer
+    background-color: white
+    &:focus
+        outline: none  
+        box-shadow: 0 0
+.active_button
+    background-color: $greenA400
+    color: white
+ 
+
 
 // *****************************************************************
 a

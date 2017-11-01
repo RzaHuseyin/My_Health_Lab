@@ -1,10 +1,10 @@
 @import 'mixin'
-
+//main page modal
 .loginModal
     .modal-dialog
         max-width: 570px
         margin: 10% auto
-        .modal-content.support
+        .modal-content.support, .product_modal_body
             display: none
         .modal-content.login
             border-radius: 5px
@@ -19,6 +19,7 @@
                 border: 2px solid #0683b9
                 border-radius: 4px
                 background-color: white 
+                font-family: $font_familyMark 
                 &:focus
                     border-color: #0683b9
             .close
@@ -71,3 +72,11 @@
                 &:before
                     margin-right: 10px
                     font-family: fontAwesome
+.product_modal
+    .modal-dialog
+        max-width: 1030px
+        margin: 10% auto
+        .modal-content.login
+            display: none !important
+        .modal-content.support
+            box-shadow: 0px 20px 40px 0px $shadow

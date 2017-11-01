@@ -4,6 +4,10 @@ $(".js_open_nav").click(function(){
         .removeClass("deactive_nav")
     
 });
+$(".js_language").click(function(){
+    $(this).toggleClass("active_lang").toggleClass("fa-caret-up")
+}); 
+
 $(".js_close_nav").click(function(){
     $(".main_navbar").addClass("deactive_nav")
         .removeClass("active_nav")
@@ -14,6 +18,13 @@ $(".js_log_modal").click(function () {
 })
 $(".js_sup_modal").click(function () {
     $("#commonModal").removeClass("loginModal").addClass("supportModal")
+})
+// modal login  and product    main bage
+$(".js_log_modal").click(function () {
+    $("#commonModal").removeClass("product_modal").addClass("loginModal")
+})
+$("#product .box_shadow").click(function () {
+    $("#commonModal").removeClass("loginModal").addClass("product_modal")
 })
 
 $('.owl-carousel').owlCarousel({
@@ -103,5 +114,11 @@ AmCharts.makeChart("chartdiv",
 }
 );
 
-//location  page 
+// js button 
+$(".js_button").click(function(){
+    $(this).parent().children("button").removeClass("active_button");
+    $(this).addClass("active_button") ;
 
+    $(".js_admin_pages").css("display","none");
+    $( "#"+ $(this).data("target")).fadeIn();
+})

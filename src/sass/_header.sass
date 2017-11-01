@@ -9,7 +9,7 @@
         font-weight: 100
         color: $greenA400
     
-    ul
+    .js_language
         position: relative
         &:before
             position: absolute
@@ -29,6 +29,9 @@
             top: 60px
             z-index: 9
             display: none
+    .active_lang
+        li
+            display: block !important
     h3 
         @include text_style(18px, $font_familyRoboto, $greey800 - 20, 900, 1.15, 0.03em) 
 button.fa
