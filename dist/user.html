@@ -33,7 +33,9 @@
     <section id="header">
         <div class="container">
             <div class="row justify-content-end pt-4 pb-lg-1 pb-4 height_lang">
-                <h2 class="doctor_header text-uppercase mr-3 mt-1 d-lg-flex d-none">Welcome, Başakşehir Belediyesi   |  <span>Log out</span></h2>
+                <h2 class="doctor_header text-uppercase mr-3 mt-1 d-lg-flex d-none">Welcome, Başakşehir Belediyesi |
+                    <span>Log out</span>
+                </h2>
                 <ul class="fa fa-caret-down d-lg-flex d-none pr-3 js_language">
                     <li class="az_lan"></li>
                     <li class="en_lan"></li>
@@ -95,20 +97,20 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-lg-9  d-lg-none d-block">
-                    <div class="row justify-content-center">
+                <div class="col-12 col-lg-9 d-lg-none d-block">
+                    <div class="row my-4">
                         <h1 class="h1_header">Kamran Rustamli</h1>
                     </div>
                 </div>
                 <div class="col-12 col-lg-9 pl-2 pl-lg-0" id="user">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 d-lg-block d-none">
                             <div class="row justify-content-end pb-3">
-                                <button class="btn js_button active_button"  data-target="profile_data">Profile Data</button>
+                                <button class="btn js_button active_button" data-target="profile_data">Profile Data</button>
                                 <span class="btn">|</span>
-                                <button class="btn js_button"  data-target="reports">Reports</button>
+                                <button class="btn js_button" data-target="reports">Reports</button>
                                 <span class="btn">|</span>
-                                <button  class="btn js_button" data-target="ask_expert">Ask the Expert</button>
+                                <button class="btn js_button" data-target="ask_expert">Ask the Expert</button>
                             </div>
                         </div>
                         <div class="col-12 js_user_pages" id="profile_data">
@@ -116,20 +118,31 @@
                                 <div class="d-block align-self-center">
                                     <h2 class="text-center text-lg-left">Profil Data</h2>
                                 </div>
-                                <div class="ml-auto mr-4 align-self-center">
-                                    <button class="button_user fa fa-pencil">edit</button> 
-                                    <span>|</span> 
+                                <div class="ml-auto mr-4 align-self-center  d-lg-block d-none">
+                                    <button class="button_user fa fa-pencil">edit</button>
+                                    <span>|</span>
                                     <button class="button_user">change password</button>
                                 </div>
-                            </div> 
+                                <div class="ml-auto mr-4 align-self-center  d-lg-none d-block">
+                                    <div class="dropdown_user_nav">
+                                        <button class="btn fa fa-angle-down" type="button" id="dropdownMenuButton" data-toggle="dropdown_user">
+                                        </button>
+                                        <div class="dropdown_menu_user">
+                                            <button class="dropdown_item js_button my-3" data-target="profile_data">Profile Data</button>
+                                            <button class="dropdown_item js_button my-3" data-target="reports">Reports</button>
+                                            <button class="dropdown_item js_button my-3" data-target="ask_expert">Ask the Expert</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row p-4">
-                                <table class="table">
+                                <table class="table table-responsive">
                                     <tbody>
                                         <tr>
                                             <th scope="row">Name Surname</th>
                                             <td>Başakşehir Belediyesi</td>
                                         </tr>
-                                        
+
                                         <tr>
                                             <th scope="row">Birthday</th>
                                             <td>13.02.1967</td>
@@ -148,7 +161,7 @@
                                         </tr>
                                         <tr>
                                             <th scope="row">Phone</th>
-                                            <td></td> 
+                                            <td></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Mobile Phone</th>
@@ -162,19 +175,163 @@
                                             <th scope="row">Card Number</th>
                                             <td>000 009 294</td>
                                         </tr>
-                                        
+
                                     </tbody>
                                 </table>
+                                <div class="col-12 d-flex d-lg-none flex-column align-items-center">
+                                    <button class="d-block mb-3 button_user_media fa fa-pencil">edit</button>
+                                    <button class="d-block mb-3 button_user_media">change password</button>
+                                </div>
                             </div>
                         </div>
                         <div class="col-12 js_user_pages" id="reports">
-                            <div class="row user_header_div pl-0 pl-lg-4">
-                                <h2 class="text-center text-lg-left align-self-center">Reports</h2>
+                            <div class="row user_header_div pl-4">
+                                <div class="d-block align-self-center">
+                                    <h2 class="text-center text-lg-left align-self-center">Reports</h2>
+                                </div>
+                                <div class="ml-auto mr-4 align-self-center d-lg-none d-block">
+                                    <div class="dropdown_user_nav">
+                                        <button class="btn fa fa-angle-down" type="button" id="dropdownMenuButton" data-toggle="dropdown_user">
+                                        </button>
+                                        <div class="dropdown_menu_user">
+                                            <button class="dropdown_item js_button my-3" data-target="profile_data">Profile Data</button>
+                                            <button class="dropdown_item js_button my-3" data-target="reports">Reports</button>
+                                            <button class="dropdown_item js_button my-3" data-target="ask_expert">Ask the Expert</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row border_bottom px-4 py-3">
+                                <button class="btn js_button_report active_button_report" data-target="detailReport">Detailed Report</button>
+                                <span class="btn js_button_reportspan">|</span>
+                                <button class="btn js_button_report" data-target="summaryReport">Summary report</button>
+                            </div>
+                            <div class="row px-4 js_user_report js_user_report_active" id="detailReport">
+                                <form class="col-12 form-horizontal pt-4" role="form" method="POST" action="/login">
+                                    <div class="row">
+                                        <div class="col-md-5 col-xl-4">
+                                            <div class="form-group row">
+                                                <label for="startDate" class="col-xl-5 pl-3 pl-xl-0 col-form-label date_operator">Start date</label>
+                                                <div class="col-xl-7 px-2 px-lg-0">
+                                                    <input type="date" class="form-control p-1 mb-0" id="startDate">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 col-xl-4">
+                                            <div class="form-group row">
+                                                <label for="endDate" class="col-xl-5 col-form-label date_operator">End date</label>
+                                                <div class="col-xl-7 px-2 px-lg-0">
+                                                    <input type="date" class="form-control p-1 mb-0" id="endDate">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5 col-xl-4">
+                                            <button type="submit" class="btn btn-success button_user_media col-xl-5 col-lg-7 col-12 px-0 ml-auto"> View report</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="col-12 py-3">
+                                    <h4>Results:</h4>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <p><span> Date of the Report:</span> <b>16.05.2017</b></p> 
+                                    <p><span> Cart Number: </span><b>000 009 294</b></p> 
+                                    <p><span> Name Surname: </span> <b>Başakşehir Belediyesi</b></p>
+                                    <p><span> Blood Group: </span> <b>16.05.2017</b></p>
+                                    <p><span>  Smoking status:</span> <b>NO</b></p> 
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <p><span> Diabetes:</span> <b>NO</b></p> 
+                                    <p><span>  Heart attack in a 1st degree relative: </span> <b>NO</b></p> 
+                                    <p><span> Gender:</span> <b>Male</b> </p>
+                                    <p><span>  Age:</span> <b>50</b></p> 
+                                </div>
+                                <div class="col-12 bg_color_user px-4">
+                                    <div class="row py-3">
+                                        <h4>Results:</h4>
+                                    </div>
+                                    <div class="row charts_user">
+                                        ////////charts //////
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row js_user_report pt-5" id="summaryReport">
+                                <div class="col-12 col-xl-6">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h4 class="report_table_h4">Cirtical Results</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="mx-2 mx-xl-0 report_main_tb mx-auto">
+                                            <h3>Reference</h3>
+                                            <h3>Range</h3>
+                                            <h3>CHOLESTEROL</h3>
+                                            <p> <span> HDL : 19 mg/dL</span>>         <span>  >= 60 mg/dL </span> </p>
+                                            <p> <span> Total Cholesterol : 226 mg/dL</span>>    <span>< 200 mg/dL  </span> </p>
+                                            <h3>PRESSURE</h3>  
+                                            <p> <span> Systolic Pressure : 121 mmHg</span>>      <span> 90-119 mmHg </span> </p> 
+                                            <p> <span> Diastolic Pressure : 80 mmHg</span>>      <span> 60-79 mmHg </span> </p>
+                                            <p> <span> Puls Pressure : 31 mmHg</span>>      <span> 30-30 mmHg </span> </p>
+                                            <h3>BLOOD GLUCOSE</h3> 
+                                            <p> <span> Fasting Blood Glucose : 103 mg/dL</span>>     <span> 70-100 mg/dL </span> </p>
+                                            <h3>RENAL FUNCTION</h3> 
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <button class=" btn btn-success mb-4 recom_button">Recomendation</button>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-6">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h4 class="report_table_h4 color2_hr">Results Requiring Attention</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="report_main_tb mx-auto report_main_tb_color2">
+                                            <h3>Reference</h3>
+                                            <h3>Range</h3>
+                                            <h3>CHOLESTEROL</h3>
+                                            <p> <span> HDL : 19 mg/dL</span>>         <span>  >= 60 mg/dL </span> </p>
+                                            <p> <span> Total Cholesterol : 226 mg/dL</span>>    <span>< 200 mg/dL  </span> </p>
+                                            <h3>PRESSURE</h3>  
+                                            <p> <span> Systolic Pressure : 121 mmHg</span>>      <span> 90-119 mmHg </span> </p> 
+                                            <p> <span> Diastolic Pressure : 80 mmHg</span>>      <span> 60-79 mmHg </span> </p>
+                                            <p> <span> Puls Pressure : 31 mmHg</span>>      <span> 30-30 mmHg </span> </p>
+                                            <h3>BLOOD GLUCOSE</h3> 
+                                            <p> <span> Fasting Blood Glucose : 103 mg/dL</span>>     <span> 70-100 mg/dL </span> </p>
+                                            <h3>RENAL FUNCTION</h3> 
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <button class=" btn btn-success mb-4 recom_button recom_button_color2">Recomendation</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-12 js_user_pages" id="ask_expert">
-                            <div class="row user_header_div align-self-center pl-0 pl-lg-4">
-                                <h2 class="text-center text-lg-left align-self-center">Ask the expert</h2> 
+                            <div class="row user_header_div align-self-center pl-4">
+                                <div class="d-block align-self-center">
+                                    <h2 class="text-center text-lg-left align-self-center">Ask the expert</h2>
+                                </div>
+                                <div class="ml-auto mr-4 align-self-center d-lg-none d-block">
+                                    <div class="dropdown_user_nav">
+                                        <button class="btn fa fa-angle-down" type="button" id="dropdownMenuButton" data-toggle="dropdown_user">
+                                        </button>
+                                        <div class="dropdown_menu_user">
+                                            <button class="dropdown_item js_button my-3" data-target="profile_data">Profile Data</button>
+                                            <button class="dropdown_item js_button my-3" data-target="reports">Reports</button>
+                                            <button class="dropdown_item js_button my-3" data-target="ask_expert">Ask the Expert</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row p-4">
+                                <div class="col-12">
+                                    <p class="mb-4">You does not ask any question yet. To ask a question, please click on the link a new question. </p>
+                                    <button type="submit" class="btn btn-success button_user_media col-xl-4 col-lg-5 col-7 px-0"> New questions</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -187,7 +344,7 @@
     <div class="modal fade" id="commonModal" tabindex="-1" role="dialog" aria-labelledby="commonModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content usermodal1">
-               somethig modal1
+                somethig modal1
             </div>
             <div class="modal-content usermodal2">
                 <div class="modal-body px-4">

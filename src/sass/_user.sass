@@ -22,7 +22,7 @@
     .active_button
         color: $greenA400
         background-color: white
-    .button_user
+    .button_user,.js_button_report
         @include text_style(16px, $font_familyMark, rgb(48, 69, 0), 900, 1.2)
         border: 0   
         padding: 0
@@ -31,21 +31,126 @@
         text-transform: lowercase
         &:before
             font-size: 14px
-            font-family: fontAwesome
+            font-family: $font_Aws
             margin-right: 7px
+    .js_button_report,.js_button_reportspan
+        text-transform: capitalize
+        font-size: 18px
+        font-weight: 500
+    .active_button_report
+        color:  $greenA400
+    .border_bottom
+        border-bottom: 2px solid  $greenA400
+ 
+
     .table
         th,td
             @include text_style(18px, $font_familyMark, $color3, 700, 1.2) 
             border: 0
         td
             font-weight: 800
-            padding: 0.5rem
+            padding: 0.8rem
             line-height: 1
             &:before
                 content: ":"
                 margin-right: 20px
+    .button_user_media
+        @include text_style(14px, $font_familyMark, #fff, 600, 1.3)
+        padding-top: 10px
+        background-color: rgb(8, 164, 231)
+        border: 0   
+        width: 200px
+        padding: 0.8rem
+        cursor: pointer
+        text-transform: uppercase
+        &:before
+            font-family: $font_Aws
+    .dropdown_user_nav
+        >button
+            &:focus
+                box-shadow: 0 0
+            &:before
+                content: "\f078"
+                font-family: $font_Aws
+                color: white
+                z-index: 4
+        .dropdown_menu_user
+            background-color: white 
+            box-shadow: 0px 20px 40px 0px $shadow
+            width: 180px
+            padding: 8px 
+            display: none
+            position: absolute
+            right: 0
+            transform: initial !important
+            z-index: 99
+            button
+                font-size: 16px
+
+    button,.btn-success
+        @include text_style(14px, $font_familyMark, rgb(255, 255, 255), 800, 1.2)
+        padding: 0.8rem 0.1rem 
+        &:focus
+            box-shadow: 0 0
+    label
+        @include text_style(18px, $font_familyMark, rgb(8, 164, 231), 800, 1.3)
+    input
+        @include text_style(15px, $font_familyMark, black- 20, 600, 1)
+        background-color: white !important
+        border-radius: 5px
+        &:focus
+    p,span
+        @include text_style(18px, $font_familyMark, rgb(77, 77, 77), 600, 1.3)
+        text-decoration: none
+    span
+        text-transform: inherit
+    b
+        @include text_style(18px, $font_familyMark, rgb(77, 77, 77), 800, 1.3)
+    h4 
+        @include text_style(18px, $font_familyMark, rgb(77, 77, 77), 800, 1.3)
+    .bg_color_user
+        background-color: #f0f0f0
+        min-height: 150px
+    .js_user_report
+        display: none
+    .js_user_report_active
+        display: flex
+    #summaryReport
+        h4 
+            font-size: 18px
+            font-family: "MarkPro"
+            color: rgb(255, 0, 0)
+            font-weight: bold
+            line-height: 1.2
+        .color2_hr
+            color: #ff7c00
             
+    .report_main_tb
+        border: 2px solid rgb(255, 0, 0)
+        border-radius: 5px
+        height: 300px
+        width: 85%
+        overflow: hidden
+        h3
+            font-size: 16px
+            font-family: $font_familyMark
+            color: rgb(77, 77, 77)
+            line-height: 1.2
+
+
+    .recom_button
+        border-radius: 5px
+        background-color: rgb(255, 0, 0)
+        border: 0
+        padding: 0.7rem
+        &:focus
+            box-shadow: 0 0
+    .recom_button_color2
+        background-color: #ff7c00
+    .report_main_tb_color2
+        border-color: #ff7c00
+         
 
 
 
-     
+    

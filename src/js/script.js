@@ -129,4 +129,17 @@ $(".js_button").click(function(){
     $(".js_admin_pages, .js_user_pages").css("display","none");
     $( "#"+ $(this).data("target")).fadeIn();
 })
+$(".js_button_report").click(function(){
+    $(this).parent().children("button").removeClass("active_button_report");
+    $(this).addClass("active_button_report") ;
 
+    $(".js_user_report").css("display","none");
+    $( "#"+ $(this).data("target")).css("display","flex");
+})
+
+// user page  js
+
+$(".dropdown_user_nav").click(function(){
+    $(".dropdown_menu_user").toggle()
+
+})
