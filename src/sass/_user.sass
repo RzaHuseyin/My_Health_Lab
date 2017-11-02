@@ -1,0 +1,51 @@
+#user
+    #profile_data
+        display: block
+    .js_user_pages
+        display: none
+    .user_header_div
+        border-radius: 5px
+        background-color: $greenA400
+        height: 50px
+    h2
+        @include text_style(24px, $font_familyMark, rgb(255, 255, 255), 800, 1.2)
+
+    .js_button,span
+        @include text_style(12px, $font_familyMark, black, 600, 1.2)
+        text-transform: uppercase
+        border: 0   
+        padding: 0
+    .js_button
+        width: auto
+    span
+        width: 10px
+    .active_button
+        color: $greenA400
+        background-color: white
+    .button_user
+        @include text_style(16px, $font_familyMark, rgb(48, 69, 0), 900, 1.2)
+        border: 0   
+        padding: 0
+        cursor: pointer
+        background: transparent
+        text-transform: lowercase
+        &:before
+            font-size: 14px
+            font-family: fontAwesome
+            margin-right: 7px
+    .table
+        th,td
+            @include text_style(18px, $font_familyMark, $color3, 700, 1.2) 
+            border: 0
+        td
+            font-weight: 800
+            padding: 0.5rem
+            line-height: 1
+            &:before
+                content: ":"
+                margin-right: 20px
+            
+
+
+
+     

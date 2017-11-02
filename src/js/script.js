@@ -126,6 +126,7 @@ $(".js_button").click(function(){
     $(this).parent().children("button").removeClass("active_button");
     $(this).addClass("active_button") ;
 
-    $(".js_admin_pages").css("display","none");
+    $(".js_admin_pages, .js_user_pages").css("display","none");
     $( "#"+ $(this).data("target")).fadeIn();
 })
+

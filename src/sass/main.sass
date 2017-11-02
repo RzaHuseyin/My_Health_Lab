@@ -6,9 +6,10 @@
 @import 'product'
 @import 'login'
 @import 'admin'
+@import 'user'
+// all page modals
 @import 'modal'
-
-
+//all page media
 @import 'media'
 
 
@@ -78,6 +79,10 @@ body, html
     span 
         text-decoration: underline
         cursor: pointer
+.h1_header
+    @include text_style(40px, $font_familyMark, $greenA400, 700, 1.2) 
+    text-transform: uppercase
+
 
 
 
