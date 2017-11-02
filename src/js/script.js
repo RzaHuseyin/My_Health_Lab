@@ -12,20 +12,27 @@ $(".js_close_nav").click(function(){
     $(".main_navbar").addClass("deactive_nav")
         .removeClass("active_nav")
 });
-// modal login and supported    main bage
-$(".js_log_modal").click(function () {
-    $("#commonModal").removeClass("supportModal").addClass("loginModal")
-})
-$(".js_sup_modal").click(function () {
-    $("#commonModal").removeClass("loginModal").addClass("supportModal")
-})
-// modal login  and product    main bage
-$(".js_log_modal").click(function () {
-    $("#commonModal").removeClass("product_modal").addClass("loginModal")
-})
-$("#product .box_shadow").click(function () {
-    $("#commonModal").removeClass("loginModal").addClass("product_modal")
-})
+
+// all modal function *******************************
+
+// modal login and supported       >>> main bage
+activeModal(".js_log_modal",".js_sup_modal","loginModal","supportModal")
+
+// modal login  and product        >>> product bage
+activeModal(".js_log_modal","#product .box_shadow","loginModal","product_modal")
+
+// modal organization_modal  and station_modal    >>>admin  bage
+activeModal("#stations_admin b","#organizations_admin b","station_modal","organization_modal")
+
+function activeModal(clickButton1, clickbutton2,modalClass1,modalClass2){
+    $(clickButton1).click(function () {
+        $("#commonModal").removeClass(modalClass2).addClass(modalClass1)
+    })
+    $(clickbutton2).click(function () {
+        $("#commonModal").removeClass(modalClass1).addClass(modalClass2)
+    })
+}
+// end all modal function *******************************
 
 $('.owl-carousel').owlCarousel({
     loop: true,

@@ -60,15 +60,19 @@
                     <div class="row">
                         <div class="col-lg-9 col-6">
                             <div class="row justify-content-end">
-                                <button type="button" class="fa fa_user js_log_modal" data-toggle="modal" data-target="#commonModal">
-                                    <img src="image/fa-user.png" alt="sadasd"> Login</button>
+                                <a href="login.html">
+                                    <button class="fa fa_user pr-0">
+                                        <img src="image/fa-user.png" alt="register_img"> Login</button>
+                                </a>
+                                <!-- <button type="button" class="fa fa_user js_log_modal" data-toggle="modal" data-target="#commonModal">
+                                    <img src="image/fa-user.png" alt="login_img"> Login</button> -->
                             </div>
                         </div>
                         <div class="col-lg-3 col-6">
                             <div class="row justify-content-end">
                                 <a href="register.html">
                                     <button class="fa fa_plus pr-0">
-                                        <img src="image/plas.png" alt=""> Register</button>
+                                        <img src="image/plas.png" alt="register_img"> Register</button>
                                 </a>
                             </div>
                         </div>
@@ -83,11 +87,11 @@
             <div class="row justify-content-center py-4">
                 <div class="col-10">
                     <div class="row">
-                        <div class="col-12 col-xl-10 mb-5"> 
+                        <div class="col-12 col-xl-10 mb-4">
                             <div class="row justify-content-center justify-content-md-start">
                                 <button class="js_button btn mt-2 mx-2 ml-md-0 mr-md-4 active_button" data-target="search_admin">Search</button>
                                 <button class="js_button btn mt-2 mx-2 ml-md-0 mr-md-4" data-target="add_operator_admin">Add operator</button>
-                                <button class="js_button btn mt-2 mx-2 ml-md-0 mr-md-4" data-target="statistic_admin">Statistic</button>
+                                <button class="js_button btn mt-2 mx-2 ml-md-0 mr-md-4" data-target="statistic_admin">Statistics</button>
                                 <button class="js_button btn mt-2 mx-2 ml-md-0 mr-md-4" data-target="stations_admin">Stations</button>
                                 <button class="js_button btn mt-2 mx-2 ml-md-0 mr-md-4" data-target="analysis_admin">Analysis</button>
                                 <button class="js_button btn mt-2 mx-2 ml-md-0 mr-md-4" data-target="organizations_admin">Organizations</button>
@@ -95,14 +99,57 @@
                         </div>
                         <div class="col-12 mt-4">
                             <div class="row">
-                                <div class="col-12"  id="admin">
+                                <div class="col-12" id="admin">
                                     <div class="row px-4 px-lg-0 js_admin_pages" id="search_admin">
-                                            search_admin
+                                        <div class="col-12 col-lg-8 pl-0 pl-lg-5">
+                                            <div class="row mb-3">
+                                                <h4>Search operator</h4>
+                                            </div>
+                                            <div class="row">
+                                                <form class="col-12 form-horizontal pt-4" role="form" method="POST" action="/login">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-group row">
+                                                                <label for="country" class="col-lg-4 p-0 col-form-label">Country:</label>
+                                                                <div class="col-lg-8 p-0">
+                                                                    <input type="text" class="form-control mb-0" id="country">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-group row">
+                                                                <label for="agency" class="col-lg-4 p-0 col-form-label">Agency:</label>
+                                                                <div class="col-lg-8 p-0">
+                                                                    <input type="text" class="form-control mb-0" id="agency">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-group row mb-0">
+                                                                <label for="searchTerms" class="col-lg-4 p-0 col-form-label">Search terms:</label>
+                                                                <div class="col-lg-8 p-0">
+                                                                    <input type="text" class="form-control mb-0" id="searchTerms">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row  justify-content-end py-3">
+                                                        <div class="col-md-4 p-0 d-flex">
+                                                            <button type="submit" class="btn btn-success col-lg-10 col-12 px-0 ml-auto text-uppercase"> Search</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="row px-4 px-lg-0 js_admin_pages" id="add_operator_admin">
                                         <form class="col-12">
-                                            <div class="row mb-3">
-                                                <h5>Add operator</h5>
+                                            <div class="row mt-4 mb-3">
+                                                <h5>Add Operator</h5>
                                             </div>
                                             <div class="row justify-content-between pr-0">
                                                 <div class="col-lg-3 mb-3">
@@ -133,8 +180,8 @@
                                                 </div>
                                                 <div class="col-lg-3 mb-3">
                                                     <div class="row">
-                                                            <label for="mobilePhone">Mobile phone</label>
-                                                            <input type="text" class="form-control" id="mobilePhone">
+                                                        <label for="mobilePhone">Mobile phone</label>
+                                                        <input type="text" class="form-control" id="mobilePhone">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 mb-3">
@@ -213,16 +260,421 @@
                                         </form>
                                     </div>
                                     <div class="row px-4 px-lg-0 js_admin_pages" id="statistic_admin">
-                                            statistic_admin
+                                        <div class="col-12 col-lg-8">
+                                            <div class="row">
+                                                <form class="col-12 form-horizontal pt-4" role="form" method="POST" action="/login">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-group row">
+                                                                <label for="agency" class="col-lg-4 col-form-label">Agency:</label>
+                                                                <div class="col-lg-8">
+                                                                    <input type="text" class="form-control mb-0" id="agency">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-group row">
+                                                                <label for="suborganization" class="col-lg-4 col-form-label">Suborganization:</label>
+                                                                <div class="col-lg-8">
+                                                                    <input type="text" class="form-control mb-0" id="suborganization">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-group row">
+                                                                <label for="inputPassword" class="col-lg-4 col-form-label">Start date:</label>
+                                                                <div class="col-lg-8">
+                                                                    <input type="password" class="form-control mb-0" id="inputPassword">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-group row mb-0">
+                                                                <label for="end_date" class="col-lg-4 col-form-label">End date:</label>
+                                                                <div class="col-lg-8">
+                                                                    <input type="text" class="form-control mb-0" id="end_date">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row  justify-content-end py-3">
+                                                        <div class="col-md-4 d-flex">
+                                                            <button type="submit" class="btn btn-success col-lg-10 col-12 px-0 ml-auto text-uppercase"> Search</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="row details_admin pt-5 pb-5 pl-2 pl-sm-4 pl-xl-5">
+                                                <p class="col-12 pl-0 pl-xl-5">Avaiable Credits:</p>
+                                                <p class="col-12 pl-0 pl-xl-5">Used credit:</p>
+                                                <p class="col-12 pl-0 pl-xl-5">The total number of active users:</p>
+                                                <p class="col-12 pl-0 pl-xl-5">Number of active user without card:</p>
+                                                <p class="col-12 pl-0 pl-xl-5">Number of new registered user between these dates:</p>
+                                                <p class="col-12 pl-0 pl-xl-5">Number of old users revisit between these dates:</p>
+                                                <h3 class="col-12 my-5 pl-0 pl-xl-5 text-uppercase">Measurements</h3>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="row px-4 px-lg-0 js_admin_pages" id="stations_admin">
-                                            stations_admin
+                                    <div class="row js_admin_pages" id="stations_admin">
+                                        <div class="col-12 col-lg-8 pl-0 pl-lg-5">
+                                            <div class="row mb-3">
+                                                <h4>Search stations</h4>
+                                            </div>
+                                            <div class="row">
+                                                <form class="col-12 form-horizontal pt-4" role="form" method="POST" action="/login">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-group row">
+                                                                <label for="agency" class="col-lg-4 p-0 col-form-label">Agency:</label>
+                                                                <div class="col-lg-8 p-0">
+                                                                    <input type="text" class="form-control mb-0" id="agency">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-group row mb-0">
+                                                                <label for="search_item" class="col-lg-4 p-0 col-form-label">Search terms:</label>
+                                                                <div class="col-lg-8 p-0">
+                                                                    <input type="password" class="form-control mb-0" id="search_item">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row  justify-content-end py-3">
+                                                        <div class="col-md-4 p-0 d-flex">
+                                                            <button type="submit" class="btn btn-success col-lg-10 col-12 px-0 ml-auto text-uppercase"> Search</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="row pt-3">
+                                                <h5>Search results</h5>
+                                            </div>
+                                            <div class="row">
+                                                <table class="table table-responsive">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">ID</th>
+                                                            <th scope="col">Name</th>
+                                                            <th scope="col">Address</th>
+                                                            <th scope="col">Main organization</th>
+                                                            <th scope="col">Organization</th>
+                                                            <th scope="col">Process</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>Terrainco</td>
+                                                            <td>Phasellus id justo ut mi fringilla elementum</td>
+                                                            <td>Phasellus id justo ut</td>
+                                                            <td>Phasellus id justo ut</td>
+                                                            <td data-toggle="modal" data-target="#commonModal">
+                                                                <b>Update</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>Terrainco</td>
+                                                            <td>Phasellus id justo ut mi fringilla elementum</td>
+                                                            <td>Phasellus id justo ut</td>
+                                                            <td>Phasellus id justo ut</td>
+                                                            <td data-toggle="modal" data-target="#commonModal">
+                                                                <b>Update</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>Terrainco</td>
+                                                            <td>Phasellus id justo ut mi fringilla elementum</td>
+                                                            <td>Phasellus id justo ut</td>
+                                                            <td>Phasellus id justo ut</td>
+                                                            <td data-toggle="modal" data-target="#commonModal">
+                                                                <b>Update</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>Terrainco</td>
+                                                            <td>Phasellus id justo ut mi fringilla elementum</td>
+                                                            <td>Phasellus id justo ut</td>
+                                                            <td>Phasellus id justo ut</td>
+                                                            <td data-toggle="modal" data-target="#commonModal">
+                                                                <b>Update</b>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="row px-4 px-lg-0 js_admin_pages" id="analysis_admin">
-                                            analysis_admin
+                                        <div class="col-12">
+                                            <div class="row details_admin pb-5">
+                                                <div class="col-12 col-lg-8 pl-2 pl-lg-5">
+                                                    <div class="row">
+                                                        <form class="col-12 form-horizontal pt-4" role="form" method="POST" action="/login">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="form-group row">
+                                                                        <label for="country" class="col-lg-4 col-form-label">Country:</label>
+                                                                        <div class="col-lg-8">
+                                                                            <input type="text" class="form-control mb-0" id="country">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="form-group row">
+                                                                        <label for="city" class="col-lg-4 col-form-label">City:</label>
+                                                                        <div class="col-lg-8">
+                                                                            <input type="text" class="form-control mb-0" id="city">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="form-group row">
+                                                                        <label for="agency" class="col-lg-4 col-form-label">Agency:</label>
+                                                                        <div class="col-lg-8">
+                                                                            <input type="text" class="form-control mb-0" id="agency">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="form-group row">
+                                                                        <label for="start_date" class="col-lg-4 col-form-label">Start date:</label>
+                                                                        <div class="col-lg-8">
+                                                                            <input type="text" class="form-control mb-0" id="start_date">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="form-group row">
+                                                                        <label for="end_date" class="col-lg-4 col-form-label">End date:</label>
+                                                                        <div class="col-lg-8">
+                                                                            <input type="text" class="form-control mb-0" id="end_date">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="form-group row mb-0">
+                                                                        <label for="ageRange" class="col-lg-4 col-form-label">Age range:</label>
+                                                                        <div class="col mr-4">
+                                                                            <input type="text" class="form-control mb-0" id="ageRange">
+                                                                        </div>
+                                                                        <div class="col">
+                                                                            <input type="text" class="form-control mb-0" id="ageRange">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row  justify-content-end py-3">
+                                                                <div class="col-md-4 d-flex">
+                                                                    <button type="submit" class="btn btn-success col-lg-10 col-12 px-0 ml-auto text-uppercase"> Search</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 pl-2 pl-lg-5">
+                                                    <ul>
+                                                        <li>
+                                                            <span class="mr-1 mr-sm-2 mr-md-5">• 2016-08-23</span>
+                                                            <span class="mr-1 mr-sm-2 mr-md-4">08:12:30</span>
+                                                            <a href="">View | CSV</a>
+                                                        </li>
+                                                        <li>
+                                                            <span class="mr-1 mr-sm-2 mr-md-5">• 2016-08-23</span>
+                                                            <span class="mr-1 mr-sm-2 mr-md-4">08:12:30</span>
+                                                            <a href="">View | CSV</a>
+                                                        </li>
+                                                        <li>
+                                                            <span class="mr-1 mr-sm-2 mr-md-5">• 2016-08-23</span>
+                                                            <span class="mr-1 mr-sm-2 mr-md-4">08:12:30</span>
+                                                            <a href="">View | CSV</a>
+                                                        </li>
+                                                        <li>
+                                                            <span class="mr-1 mr-sm-2 mr-md-5">• 2016-08-23</span>
+                                                            <span class="mr-1 mr-sm-2 mr-md-4">08:12:30</span>
+                                                            <a href="">View | CSV</a>
+                                                        </li>
+                                                        <li>
+                                                            <span class="mr-1 mr-sm-2 mr-md-5">• 2016-08-23</span>
+                                                            <span class="mr-1 mr-sm-2 mr-md-4">08:12:30</span>
+                                                            <a href="">View | CSV</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="row px-4 px-lg-0 js_admin_pages" id="organizations_admin">
-                                            organizations
+                                    <div class="row js_admin_pages" id="organizations_admin">
+                                        <div class="col-12 pl-0 pl-lg-5 details_admin">
+                                            <div class="row">
+                                                <form class="col-12 form-horizontal py-4" role="form" method="POST" action="/login">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-group row align-items-center my-2">
+                                                                <label for="search_organization" class="col-sm-3 p-0 col-form-label">Search organization:</label>
+                                                                <div class="col-sm-5 p-0">
+                                                                    <input type="password" class="form-control mb-0" id="search_organization">
+                                                                </div>
+                                                                <div class="col-sm-2 p-0 d-flex">
+                                                                    <button type="submit" class="btn btn-success col-lg-10 col-12 px-0 ml-auto text-uppercase"> Search</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="row py-3">
+                                                <div class="col-6 col-lg-3 d-flex px-0">
+                                                    <button type="button" class="btn btn-success col-lg-10 px-0 col-12 text-uppercase"> Add organization</button>
+                                                </div>
+                                            </div>
+                                            <div class="row pt-3">
+                                                <h5>Search results</h5>
+                                            </div>
+                                            <div class="row">
+                                                <table class="table table-responsive">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">ID</th>
+                                                            <th scope="col">Name</th>
+                                                            <th scope="col">Key (subdomain)</th>
+                                                            <th scope="col">Main organization</th>
+                                                            <th scope="col">Personal Use</th>
+                                                            <th scope="col">Operations</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>Yöntem Beslenme Eğitim Danışmanlığı</td>
+                                                            <td>Yontembes</td>
+                                                            <td>No</td>
+                                                            <td>No</td>
+                                                            <td data-toggle="modal" data-target="#commonModal">
+                                                                <b> Update</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>Yöntem Beslenme Eğitim Danışmanlığı</td>
+                                                            <td>Yontembes</td>
+                                                            <td>No</td>
+                                                            <td>No</td>
+                                                            <td data-toggle="modal" data-target="#commonModal">
+                                                                <b> Update</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>Yöntem Beslenme Eğitim Danışmanlığı</td>
+                                                            <td>Yontembes</td>
+                                                            <td>No</td>
+                                                            <td>No</td>
+                                                            <td data-toggle="modal" data-target="#commonModal">
+                                                                <b> Update</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>Yöntem Beslenme Eğitim Danışmanlığı</td>
+                                                            <td>Yontembes</td>
+                                                            <td>No</td>
+                                                            <td>No</td>
+                                                            <td data-toggle="modal" data-target="#commonModal">
+                                                                <b> Update</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5</td>
+                                                            <td>Yöntem Beslenme Eğitim Danışmanlığı</td>
+                                                            <td>Yontembes</td>
+                                                            <td>No</td>
+                                                            <td>No</td>
+                                                            <td data-toggle="modal" data-target="#commonModal">
+                                                                <b> Update</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6</td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td data-toggle="modal" data-target="#commonModal">
+                                                                <b> Update</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>7</td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td data-toggle="modal" data-target="#commonModal">
+                                                                <b> Update</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>8</td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td data-toggle="modal" data-target="#commonModal">
+                                                                <b> Update</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>9</td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td data-toggle="modal" data-target="#commonModal">
+                                                                <b> Update</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>10</td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td> </td>
+                                                            <td data-toggle="modal" data-target="#commonModal">
+                                                                <b> Update</b>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -235,79 +687,253 @@
     <!-- Modal for login and supported parameters -->
     <div class="modal fade" id="commonModal" tabindex="-1" role="dialog" aria-labelledby="commonModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content login">
-                <div class="col-12 pt-2">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <i class="fa fa-times" aria-hidden="true"></i>
-                    </button>
-                </div>
-                <div class="modal-body px-4">
+            <div class="modal-content station px-3 px-lg-5">
+                <div class="modal-body px-4 px-lg-5">
+                    <h4 class="py-4">Update Station info</h4>
                     <form class="form-horizontal" role="form" method="POST" action="/login">
                         <div class="row">
                             <div class="col-12">
-                                <div class="form-group row mb-0">
-                                    <label for="cardNumber" class="col-lg-4 col-form-label">Card Number</label>
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control" id="cardNumber">
+                                <div class="form-group row">
+                                    <label for="stationNumber" class="col-lg-6 col-form-label">Station Number</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="stationNumber">
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <label class="col-lg-12 label_between" for="">or</label>
                         </div>
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group row">
-                                    <label for="citizenId" class="col-lg-4 col-form-label">Citizen id</label>
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control" id="citizenId">
+                                    <label for="stationName" class="col-lg-6 col-form-label">Station name</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="stationName">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <div class="form-group row mb-0">
-                                    <label for="inputPassword" class="col-lg-4 col-form-label">Password</label>
-                                    <div class="col-lg-8">
-                                        <input type="password" class="form-control" id="inputPassword">
+                                <div class="form-group row">
+                                    <label for="stationAddress" class="col-lg-6 col-form-label">Station address</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="stationAddress">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row justify-content-end pr-3">
-                            <a class="btn_link" href="">Forgot Password?</a>
-                        </div>
-                        <div class="row py-2">
-                            <label for="" class="col-12">If you are a new user:</label>
-                        </div>
-                        <div class="row  justify-content-between pb-4 pt-2">
-                            <div class="col-lg-8 pr-3">
-                                <p>You need to get a health card from the mobile health station. To find your nearest mobile
-                                    health station
-                                    <a class="btn_link1" href="">please click</a>
-                                </p>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group row">
+                                    <label for="phone" class="col-lg-6 col-form-label">Phone</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="phone">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-lg-4 align-self-end d-flex pt-3">
-                                <button type="submit" class="btn btn-success col-lg-10 col-12 ml-auto"> Login</button>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group row">
+                                    <label for="latitude" class="col-lg-6 col-form-label">Latitude</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="latitude">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group row">
+                                    <label for="longtitude" class="col-lg-6 col-form-label">Longtitude</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="longtitude">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group row">
+                                    <label for="team" class="col-lg-6 col-form-label">Team</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="team">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group row">
+                                    <label for="country" class="col-lg-6 col-form-label">Country</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="country">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group row">
+                                    <label for="show_location" class="col-lg-10 col-form-label">Not show location on the web page</label>
+                                    <div class="col-lg-2 align-self-center">
+                                        <input type="checkbox" class="form-control" id="show_location">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row  justify-content-end pb-4 pt-2">
+                            <div class="col-lg-5 align-self-end d-flex pt-3">
+                                <button type="submit" class="btn btn-success col-lg-10 col-12 ml-auto"> Update</button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="modal-content support">
+            <div class="modal-content organization px-3 px-lg-5">
                 <div class="modal-body px-4">
                     <div class="col-12">
+                        <h4 class="py-4">Update orgnization</h4>
                         <div class="row">
-                            Other modal
+                            <div class="col-sm-6">
+                                <h5>Avaliable Credit: 0</h5>
+                            </div>
+                            <div class="col-sm-6 mb-3">
+                                <button type="submit" class="btn btn-success col-12 ml-auto">Install</button>
+                            </div>
                         </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <p>Used credit:</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p>147670</p>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <p>Installations:</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 border_div mb-4">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-6 pr-0">
+                                            <span>Installed credit amount:</span>
+                                        </div>
+                                        <div class="col-6">
+                                            <span>11366</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <span>Installed date:</span>
+                                        </div>
+                                        <div class="col-6">
+                                            <span>01/11/2014 18:44:29</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="form-horizontal" role="form" method="POST" action="/login">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group row">
+                                        <label for="orgnization" class="col-lg-6 col-form-label">Orgnization Number</label>
+                                        <div class="col-lg-6">
+                                            <input type="text" class="form-control" id="orgnization">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group row">
+                                        <label for="operatotEmail" class="col-lg-6 col-form-label">Operator email:</label>
+                                        <div class="col-lg-6">
+                                            <input type="text" class="form-control" id="operatotEmail">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group row">
+                                        <label for="mainOrgnization" class="col-lg-6 col-form-label">Main orgnization</label>
+                                        <div class="col-lg-6">
+                                            <input type="text" class="form-control" id="mainOrgnization">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group row">
+                                        <label for="message" class="col-lg-6 col-form-label">Special message</label>
+                                        <div class="col-lg-6">
+                                            <textarea type="text" class="form-control" id="message" row="10"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group row">
+                                        <label for="keySubdomain" class="col-lg-6 col-form-label">Key(subdomain)</label>
+                                        <div class="col-lg-6">
+                                            <input type="text" class="form-control" id="keySubdomain">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group row">
+                                        <label for="logoUrl" class="col-lg-6 col-form-label">Logo Url</label>
+                                        <div class="col-lg-6">
+                                            <input type="text" class="form-control" id="logoUrl">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group row">
+                                        <label for="tite_contact" class="col-lg-6 col-form-label">Tite in contact</label>
+                                        <div class="col-lg-6">
+                                            <input type="text" class="form-control" id="tite_contact">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group row">
+                                        <label for="address" class="col-lg-6 col-form-label">Address:</label>
+                                        <div class="col-lg-6">
+                                            <input type="text" class="form-control" id="address">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group row">
+                                        <label for="phone" class="col-lg-6 col-form-label">Phone:</label>
+                                        <div class="col-lg-6">
+                                            <input type="text" class="form-control" id="phone">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row  justify-content-end pb-4 pt-2">
+                                <div class="col-lg-5 align-self-end d-flex pt-3">
+                                    <button type="submit" class="btn btn-success col-lg-10 col-12 ml-auto"> Update</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                </div>
-                <div class="col-12 pt-2 d-block d-lg-none">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <i class="fa fa-angle-left" aria-hidden="true">Back</i>
-                    </button>
                 </div>
             </div>
         </div>

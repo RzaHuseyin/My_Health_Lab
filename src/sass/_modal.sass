@@ -1,5 +1,9 @@
 @import 'mixin'
 //main page modal
+.close
+        opacity: 1
+        i
+            color: white 
 .loginModal
     .modal-dialog
         max-width: 570px
@@ -10,37 +14,34 @@
             border-radius: 5px
             background-color: rgb(8, 164, 231)
             box-shadow: 0px 20px 40px 0px $shadow
-            label
-                @include text_style(16px, $font_familyMark, rgb(255, 254, 254), 900, 1.875, 0.03em) 
-                text-transform: uppercase
-            .label_between
-                line-height: 1.3
-            .form-control
-                border: 2px solid #0683b9
-                border-radius: 4px
-                background-color: white 
-                font-family: $font_familyMark 
-                &:focus
-                    border-color: #0683b9
-            .close
-                opacity: 1
-                i
-                    color: white  
-            p
-                @include text_style(15px, $font_familyMark, rgb(255, 254, 254), 500, 1.2) 
-            .btn-success
-                @include text_style(16px, $font_familyMark, rgb(255, 254, 254), 600, 1.875, 0.03em) 
-                text-transform: uppercase
-                padding: 0.2rem 
-                background-color: $greenA400
-                border: 0
-                border-radius: 0
-            .btn_link
-                @include text_style(15px, $font_familyMark, $greey900, 900, 1.2) 
-                padding-top: 10px
-            .btn_link1
-                @extend .btn_link
-                text-decoration: underline
+        label
+            @include text_style(16px, $font_familyMark, rgb(255, 254, 254), 900, 1.875, 0.03em) 
+            text-transform: uppercase
+        .label_between
+            line-height: 1.3 
+        .form-control
+            border: 2px solid #0683b9
+            border-radius: 4px
+            background-color: white 
+            font-family: $font_familyMark 
+            &:focus
+                border-color: #0683b9
+        
+        p
+            @include text_style(15px, $font_familyMark, rgb(255, 254, 254), 500, 1.2) 
+        .btn-success
+            @include text_style(16px, $font_familyMark, rgb(255, 254, 254), 600, 1.875, 0.03em) 
+            text-transform: uppercase
+            padding: 0.2rem 
+            background-color: $greenA400
+            border: 0
+            border-radius: 0
+        .btn_link
+            @include text_style(15px, $font_familyMark, $greey900, 900, 1.2) 
+            padding-top: 10px
+        .btn_link1
+            @extend .btn_link
+            text-decoration: underline
         .modal-content.support
             // background: red
 .supportModal
@@ -72,6 +73,7 @@
                 &:before
                     margin-right: 10px
                     font-family: fontAwesome
+    //product page modals
 .product_modal
     .modal-dialog
         max-width: 1030px
@@ -80,3 +82,60 @@
             display: none !important
         .modal-content.support
             box-shadow: 0px 20px 40px 0px $shadow
+
+// admin page modals  
+.station_modal, .organization_modal ,.doctor_modal
+    label,h4,h5,p,span
+        @include text_style(14px, $font_familyMark, rgb(255, 255, 255), 600, 1.875)
+
+    h4
+        font-size: 18px
+    h5 
+        font-size: 16px
+    span  
+        font-family: 12px
+    .btn-success
+        @include text_style(16px, $font_familyMark, rgb(255, 254, 254), 600, 1.875, 0.03em) 
+        text-transform: uppercase
+        padding: 0.2rem 0.9rem
+        background-color: $greenA400
+        border: 0
+        border-radius: 0
+    .modal-content
+        background-color: rgb(8, 164, 231)
+        border-radius: 5px
+        box-shadow: 0px 20px 40px 0px $shadow
+                
+.station_modal
+    .modal-dialog
+        max-width: 570px
+        margin: 6% auto
+        .modal-content.organization
+            display: none
+        .modal-content.station
+               
+            
+
+.organization_modal
+    .modal-dialog
+        max-width: 570px
+        margin: 6% auto
+        .modal-content.station
+            display: none
+        .modal-content.organization
+    .border_div
+        border: 2px solid white
+        border-radius: 5px
+
+.doctor_modal
+    .modal-dialog
+        max-width: 570px
+        margin: 10% auto
+    textarea
+        height: 200px
+        @include text_style(16px, $font_familyMark, rgb(255, 254, 254), 500, 1.2) 
+        
+    h5 
+        font-size: 16px
+        
+ 

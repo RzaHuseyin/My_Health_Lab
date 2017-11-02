@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Health Lab</title>
+    <script src="https://use.fontawesome.com/51d8275571.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+    <!-- amCharts javascript sources -->
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/pie.js"></script>
+    <!-- amCharts javascript code -->
+
+    <!-- owlcarusel css -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- owlcarusel animate -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- font css -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="css/font/stylesheet.css">
+
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+
+    <section id="header">
+        <div class="container">
+            <div class="row justify-content-end pt-4 pb-lg-1 pb-4 height_lang">
+                <ul class="fa fa-caret-down d-lg-flex d-none pr-3 js_language">
+                    <li class="az_lan"></li>
+                    <li class="en_lan"></li>
+                    <li class="ru_lan"></li>
+                </ul>
+            </div>
+            <div class="row justify-content-between">
+                <div class="col-lg-5">
+                    <div class="row">
+                        <div class="col-12 col-lg-2">
+                            <div class="row pl-2 pl-lg-0 justify-content-center">
+                                <a href="index.html">
+                                    <img src="image/logo1.png" alt="logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-3 col-lg-2 d-lg-flex d-none align-items-stretch pl-4">
+                            <div class="row align-items-center pr-2">
+                                <h3>My Health Lab</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 align-self-center d-lg-block d-none">
+                    <div class="row">
+                        <div class="col-lg-9 col-6">
+                            <div class="row justify-content-end">
+                                    <a href="login.html">
+                                        <button class="fa fa_user pr-0">
+                                            <img src="image/fa-user.png" alt="register_img"> Login</button>
+                                    </a>
+                                <!-- <button type="button" class="fa fa_user js_log_modal" data-toggle="modal" data-target="#commonModal">
+                                    <img src="image/fa-user.png" alt="login_img"> Login</button> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <div class="row justify-content-end">
+                                <a href="register.html">
+                                    <button class="fa fa_plus pr-0">
+                                        <img src="image/plas.png" alt="register_img"> Register</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="operator">
+        <div class="container">
+            <div class="row justify-content-center py-4">
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col-12 col-xl-10 mb-4">
+                            <div class="row justify-content-center justify-content-md-start">
+                                <button class="js_button btn mt-2 mx-2 ml-md-0 mr-md-4 active_button" data-target="search_operator">Search</button>
+                                <button class="js_button btn mt-2 mx-2 ml-md-0 mr-md-4" data-target="add_operator">Add operator</button>
+                                <button class="js_button btn mt-2 mx-2 ml-md-0 mr-md-4" data-target="statistic_operator">Statistics</button>
+                                <button class="js_button btn mt-2 mx-2 ml-md-0 mr-md-4" data-target="stations_operator">Stations</button>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <div class="row">
+                                <div class="col-12" id="admin">
+                                    <div class="row px-4 px-lg-0 js_admin_pages" id="search_operator">
+                                        <div class="col-12 pl-0 pl-lg-5 details_admin">
+                                            <div class="row">
+                                                <form class="col-12 form-horizontal py-4" role="form" method="POST" action="/login">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-group row align-items-center my-2 px-3 px-xl-0">
+                                                                <label for="search_organization" class="col-md-3 col-xl-2 col-form-label">Search terms:</label>
+                                                                <div class="col-md-5 col-xl-6">
+                                                                    <input type="password" class="form-control mb-0" id="search_organization">
+                                                                </div>
+                                                                <div class="col-md-3 col-xl-2 d-flex mt-3 mt-md-0">
+                                                                    <button type="submit" class="btn btn-success col-lg-10 col-12 ml-auto text-uppercase"> Search</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row px-4 px-lg-0 js_admin_pages" id="add_operator">
+
+                                        <form class="col-12">
+                                                <div class="row mt-4 mb-3">
+                                                    <h5>Add user</h5>
+                                                </div>
+                                                <div class="row justify-content-between pr-0 pr-xl-5">
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="yourName">Your name</label>
+                                                            <input type="text" class="form-control" id="yourName">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="birthday">Birthday*</label>
+                                                            <input type="date" class="form-control" id="birthday">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="phone">Phone</label>
+                                                            <input type="text" class="form-control" id="phone">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-between pr-0 pr-xl-5">
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="Surname">Surname*</label>
+                                                            <input type="text" class="form-control" id="Surname">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="gender">Gender*</label>
+                                                            <input type="text" class="form-control" id="gender">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="mobilePhone">Mobile phone</label>
+                                                            <input type="text" class="form-control" id="mobilePhone">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-between pr-0 pr-xl-5">
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="idNumber">ID Number</label>
+                                                            <input type="number" class="form-control" id="idNumber">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="height">Height(cm)*</label>
+                                                            <input type="text" class="form-control" id="height">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="emailAdress">Email address</label>
+                                                            <input type="email" class="form-control" id="emailAdress">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-between pr-0 pr-xl-5">
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="password">Password*</label>
+                                                            <input type="password" class="form-control" id="password">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="language">Language*</label>
+                                                            <input type="text" class="form-control" id="language">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="country">Country*</label>
+                                                            <input type="text" class="form-control" id="country">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-between pr-0 pr-xl-5">
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="bloodGroup">Blood Group*</label>
+                                                            <input type="text" class="form-control" id="bloodGroup">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="organization">Organization*</label>
+                                                            <input type="text" class="form-control" id="organization">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-between pr-0 pr-xl-5">
+                                                    <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <h5>Questions relating to the assessment of cardiovascular disease risk</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-between pr-0 pr-xl-5">
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="smoking">Smoking*</label>
+                                                            <input type="text" class="form-control" id="smoking">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="diabets1">Diabets*</label>
+                                                            <input type="text" class="form-control" id="diabets1">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="diabets2">Diabets*</label>
+                                                            <input type="text" class="form-control" id="diabets2">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-between pr-0 pr-xl-5">
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="degree">Angina or Heart attack in a 1st degree relative <60? *</label>
+                                                            <input type="text" class="form-control" id="degree">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="ethncity">Ethncity*</label>
+                                                            <input type="text" class="form-control" id="ethncity">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="disease">Chronic kidney disease*</label>
+                                                            <input type="text" class="form-control" id="disease">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-between pr-0 pr-xl-5">
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="fibril">Artial fibrillation*</label>
+                                                            <input type="text" class="form-control" id="fibril">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="val">Do you getting pressure treatment?*</label>
+                                                            <input type="text" class="form-control" id="val">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 mb-3">
+                                                        <div class="row">
+                                                            <label for="arthritis">Rheumatoid arthritis*</label>
+                                                            <input type="text" class="form-control" id="arthritis">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-between pr-0 pr-xl-5 mb-5">
+                                                    <div class="col-6 col-lg-4">
+                                                        <div class="row mb-0 mb-lg-5">
+                                                            <p class="mb-3">*Star fields are mandatory</p>
+                                                            <p>E-mail address is required in order to recieve a new password if you’ve forgotten.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="row align-items-end flex-column flex-lg-row">
+                                                            <button class="btn back_btn mr-0 mr-lg-4 mb-2 ml-auto" type="submit">Back</button>
+                                                            <button class="btn register_btn mb-2" type="submit">Update</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                    </div>
+                                    <div class="row px-4 px-lg-0 js_admin_pages" id="statistic_operator">
+                                        <form class="col-12 form-horizontal pt-4" role="form" method="POST" action="/login">
+                                            <div class="row">
+                                                <h5>Statistics</h5>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-5 col-xl-4">
+                                                    <div class="form-group row">
+                                                        <label for="startDate" class="col-lg-4 pl-3 pl-xl-0 col-form-label date_operator">Start date</label>
+                                                        <div class="col-lg-8">
+                                                            <input type="date" class="form-control p-1 mb-0" id="startDate">
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                                <div class="col-md-5 col-xl-4">
+                                                    <div class="form-group row">
+                                                        <label for="endDate" class="col-lg-4 col-form-label date_operator">End date</label>
+                                                        <div class="col-lg-8">
+                                                            <input type="date" class="form-control p-1 mb-0" id="endDate">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="col-md-5 col-lg-3">
+                                                    <button type="submit" class="btn btn-success col-xl-5 col-lg-7 col-12 px-0 ml-auto"> View report</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                            
+                                        <div class="col-12 py-4">
+                                            <div class="row details_admin pt-5 pb-5 pl-2 mt-1 pl-sm-4 pl-xl-5">
+                                                <p class="col-12 pl-0 pl-xl-5">Avaiable Credits:</p>
+                                                <p class="col-12 pl-0 pl-xl-5">Used credit:</p>
+                                                <p class="col-12 pl-0 pl-xl-5">The total number of active users:</p>
+                                                <p class="col-12 pl-0 pl-xl-5">Number of active user without card:</p>
+                                                <p class="col-12 pl-0 pl-xl-5">Number of new registered user between these dates:</p>
+                                                <p class="col-12 pl-0 pl-xl-5">Number of old users revisit between these dates:</p>
+                                                <h3 class="col-12 my-5 pl-0 pl-xl-5 text-uppercase">Measurements</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row js_admin_pages" id="stations_operator">
+                                        <div class="col-12">
+                                            <div class="row pt-3">
+                                                <h5>Stations</h5>
+                                            </div>
+                                            <div class="row">
+                                                <table class="table table-responsive">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Station number</th>
+                                                            <th scope="col">Station name</th>
+                                                            <th scope="col">Station address</th>
+                                                            <th scope="col">Operations</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>Terrainco</td>
+                                                            <td>Phasellus id justo ut mi fringilla elementum</td>
+                                                            <td data-toggle="modal" data-target="#commonModal"><b>Update</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>Terrainco</td>
+                                                            <td>Phasellus id justo ut mi fringilla elementum</td>
+                                                            <td data-toggle="modal" data-target="#commonModal"><b>Update</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>Terrainco</td>
+                                                            <td>Phasellus id justo ut mi fringilla elementum</td>
+                                                            <td data-toggle="modal" data-target="#commonModal"><b>Update</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>Terrainco</td>
+                                                            <td>Phasellus id justo ut mi fringilla elementum</td>
+                                                            <td data-toggle="modal" data-target="#commonModal"><b>Update</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5</td>
+                                                            <td>Terrainco</td>
+                                                            <td>Phasellus id justo ut mi fringilla elementum</td>
+                                                            <td data-toggle="modal" data-target="#commonModal"><b>Update</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6</td>
+                                                            <td>Terrainco</td>
+                                                            <td>Phasellus id justo ut mi fringilla elementum</td>
+                                                            <td data-toggle="modal" data-target="#commonModal"><b>Update</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>7</td>
+                                                            <td>Terrainco</td>
+                                                            <td>Phasellus id justo ut mi fringilla elementum</td>
+                                                            <td data-toggle="modal" data-target="#commonModal"><b>Update</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>8</td>
+                                                            <td>Terrainco</td>
+                                                            <td>Phasellus id justo ut mi fringilla elementum</td>
+                                                            <td data-toggle="modal" data-target="#commonModal"><b>Update</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>9</td>
+                                                            <td>Terrainco</td>
+                                                            <td>Phasellus id justo ut mi fringilla elementum</td>
+                                                            <td data-toggle="modal" data-target="#commonModal"><b>Update</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>10</td>
+                                                            <td>Terrainco</td>
+                                                            <td>Phasellus id justo ut mi fringilla elementum</td>
+                                                            <td data-toggle="modal" data-target="#commonModal"><b>Update</b></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Modal for login and supported parameters -->
+    <div class="modal fade station_modal" id="commonModal" tabindex="-1" role="dialog" aria-labelledby="commonModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content station px-3 px-lg-5">
+                <div class="modal-body px-4 px-lg-5">
+                    <h4 class="py-4">Update Station info</h4>
+                    <form class="form-horizontal" role="form" method="POST" action="/login">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group row">
+                                    <label for="stationNumber" class="col-lg-6 col-form-label">Station Number</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="stationNumber">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group row">
+                                    <label for="stationName" class="col-lg-6 col-form-label">Station name</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="stationName">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group row">
+                                    <label for="stationAddress" class="col-lg-6 col-form-label">Station address</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="stationAddress">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group row">
+                                    <label for="phone" class="col-lg-6 col-form-label">Phone</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="phone">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group row">
+                                    <label for="latitude" class="col-lg-6 col-form-label">Latitude</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="latitude">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group row">
+                                    <label for="longtitude" class="col-lg-6 col-form-label">Longtitude</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="longtitude">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group row">
+                                    <label for="team" class="col-lg-6 col-form-label">Team</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="team">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group row">
+                                    <label for="country" class="col-lg-6 col-form-label">Country</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="country">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group row">
+                                    <label for="show_location" class="col-lg-10 col-form-label">Not show location on the web page</label>
+                                    <div class="col-lg-2 align-self-center">
+                                        <input type="checkbox" class="form-control" id="show_location">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row  justify-content-end pb-4 pt-2">
+                            <div class="col-lg-5 align-self-end d-flex pt-3">
+                                <button type="submit" class="btn btn-success col-lg-10 col-12 ml-auto"> Update</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Modal -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <!-- bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+    <!-- end bootstrap -->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <script src="js/scripts.min.js"></script>
+</body>
+
+</html>
