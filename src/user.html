@@ -119,9 +119,9 @@
                                     <h2 class="text-center text-lg-left">Profil Data</h2>
                                 </div>
                                 <div class="ml-auto mr-4 align-self-center  d-lg-block d-none">
-                                    <button class="button_user fa fa-pencil">edit</button>
+                                    <button class="button_user fa fa-pencil js_edit_user" data-toggle="modal" data-target="#commonModal">edit</button>
                                     <span>|</span>
-                                    <button class="button_user">change password</button>
+                                    <button class="button_user js_change_password_user" data-toggle="modal" data-target="#commonModal">change password</button>
                                 </div>
                                 <div class="ml-auto mr-4 align-self-center  d-lg-none d-block">
                                     <div class="dropdown_user_nav">
@@ -179,8 +179,8 @@
                                     </tbody>
                                 </table>
                                 <div class="col-12 d-flex d-lg-none flex-column align-items-center">
-                                    <button class="d-block mb-3 button_user_media fa fa-pencil">edit</button>
-                                    <button class="d-block mb-3 button_user_media">change password</button>
+                                    <button class="d-block mb-3 button_user_media fa fa-pencil js_edit_user" data-toggle="modal" data-target="#commonModal">edit</button>
+                                    <button class="d-block mb-3 button_user_media js_change_password_user" data-toggle="modal" data-target="#commonModal">change password</button>
                                 </div>
                             </div>
                         </div>
@@ -259,23 +259,23 @@
                                 <div class="col-12 col-xl-6">
                                     <div class="row">
                                         <div class="col-12">
-                                            <h4 class="report_table_h4">Cirtical Results</h4>
+                                            <h4 class="report_table_h4 mb-2">Cirtical Results</h4>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="mx-2 mx-xl-0 report_main_tb mx-auto">
-                                            <h3>Reference</h3>
-                                            <h3>Range</h3>
-                                            <h3>CHOLESTEROL</h3>
-                                            <p> <span> HDL : 19 mg/dL</span>>         <span>  >= 60 mg/dL </span> </p>
-                                            <p> <span> Total Cholesterol : 226 mg/dL</span>>    <span>< 200 mg/dL  </span> </p>
-                                            <h3>PRESSURE</h3>  
-                                            <p> <span> Systolic Pressure : 121 mmHg</span>>      <span> 90-119 mmHg </span> </p> 
-                                            <p> <span> Diastolic Pressure : 80 mmHg</span>>      <span> 60-79 mmHg </span> </p>
-                                            <p> <span> Puls Pressure : 31 mmHg</span>>      <span> 30-30 mmHg </span> </p>
-                                            <h3>BLOOD GLUCOSE</h3> 
-                                            <p> <span> Fasting Blood Glucose : 103 mg/dL</span>>     <span> 70-100 mg/dL </span> </p>
-                                            <h3>RENAL FUNCTION</h3> 
+                                        <div class="report_main_tb mx-auto mx-xl-0 px-2 pt-2">
+                                            <h3 class="d-flex justify-content-end">Reference</h3>
+                                            <h3 class="d-flex justify-content-end">Range</h3>
+                                            <h3 class="d-flex justify-content-start">CHOLESTEROL</h3>
+                                            <p class="d-flex justify-content-between"> <span class="span_left"> HDL : 19 mg/dL</span><span class="span_right">  >= 60 mg/dL </span> </p>
+                                            <p class="d-flex justify-content-between"> <span class="span_left"> Total Cholesterol : 226 mg/dL</span>   <span class="span_right">< 200 mg/dL  </span> </p>
+                                            <h3 class="d-flex justify-content-start">PRESSURE</h3>  
+                                            <p class="d-flex justify-content-between"> <span class="span_left"> Systolic Pressure : 121 mmHg</span>     <span class="span_right"> 90-119 mmHg </span> </p> 
+                                            <p class="d-flex justify-content-between"> <span class="span_left"> Diastolic Pressure : 80 mmHg</span>     <span class="span_right"> 60-79 mmHg </span> </p>
+                                            <p class="d-flex justify-content-between"> <span class="span_left"> Puls Pressure : 31 mmHg</span>     <span class="span_right"> 30-30 mmHg </span> </p>
+                                            <h3 class="d-flex justify-content-start">BLOOD GLUCOSE</h3> 
+                                            <p class="d-flex justify-content-between"> <span class="span_left"> Fasting Blood Glucose : 103 mg/dL</span>    <span class="span_right"> 70-100 mg/dL </span> </p>
+                                            <h3 class="d-flex justify-content-start">RENAL FUNCTION</h3> 
                                         </div>
                                     </div>
                                     <div class="row mt-3">
@@ -285,23 +285,23 @@
                                 <div class="col-12 col-xl-6">
                                     <div class="row">
                                         <div class="col-12">
-                                            <h4 class="report_table_h4 color2_hr">Results Requiring Attention</h4>
+                                            <h4 class="report_table_h4 color2_h mb-2">Results Requiring Attention</h4>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="report_main_tb mx-auto report_main_tb_color2">
-                                            <h3>Reference</h3>
-                                            <h3>Range</h3>
-                                            <h3>CHOLESTEROL</h3>
-                                            <p> <span> HDL : 19 mg/dL</span>>         <span>  >= 60 mg/dL </span> </p>
-                                            <p> <span> Total Cholesterol : 226 mg/dL</span>>    <span>< 200 mg/dL  </span> </p>
-                                            <h3>PRESSURE</h3>  
-                                            <p> <span> Systolic Pressure : 121 mmHg</span>>      <span> 90-119 mmHg </span> </p> 
-                                            <p> <span> Diastolic Pressure : 80 mmHg</span>>      <span> 60-79 mmHg </span> </p>
-                                            <p> <span> Puls Pressure : 31 mmHg</span>>      <span> 30-30 mmHg </span> </p>
-                                            <h3>BLOOD GLUCOSE</h3> 
-                                            <p> <span> Fasting Blood Glucose : 103 mg/dL</span>>     <span> 70-100 mg/dL </span> </p>
-                                            <h3>RENAL FUNCTION</h3> 
+                                        <div class="report_main_tb report_main_tb_color2 mx-auto mx-xl-0 px-2">
+                                            <h3 class="d-flex justify-content-end">Reference</h3>
+                                            <h3 class="d-flex justify-content-end">Range</h3>
+                                            <h3 class="d-flex justify-content-start">CHOLESTEROL</h3>
+                                            <p class="d-flex justify-content-between"> <span class="span_left"> HDL : 19 mg/dL</span>        <span class="span_right">  >= 60 mg/dL </span> </p>
+                                            <p class="d-flex justify-content-between"> <span class="span_left"> Total Cholesterol : 226 mg/dL</span>   <span class="span_right">< 200 mg/dL  </span> </p>
+                                            <h3 class="d-flex justify-content-start">PRESSURE</h3>  
+                                            <p class="d-flex justify-content-between"> <span class="span_left"> Systolic Pressure : 121 mmHg</span>     <span class="span_right"> 90-119 mmHg </span> </p> 
+                                            <p class="d-flex justify-content-between"> <span class="span_left"> Diastolic Pressure : 80 mmHg</span>     <span class="span_right"> 60-79 mmHg </span> </p>
+                                            <p class="d-flex justify-content-between"> <span class="span_left"> Puls Pressure : 31 mmHg</span>     <span class="span_right"> 30-30 mmHg </span> </p>
+                                            <h3 class="d-flex justify-content-start">BLOOD GLUCOSE</h3> 
+                                            <p class="d-flex justify-content-between"> <span class="span_left"> Fasting Blood Glucose : 103 mg/dL</span>    <span class="span_right"> 70-100 mg/dL </span> </p>
+                                            <h3 class="d-flex justify-content-start">RENAL FUNCTION</h3> 
                                         </div>
                                     </div>
                                     <div class="row mt-3">
@@ -330,7 +330,7 @@
                             <div class="row p-4">
                                 <div class="col-12">
                                     <p class="mb-4">You does not ask any question yet. To ask a question, please click on the link a new question. </p>
-                                    <button type="submit" class="btn btn-success button_user_media col-xl-4 col-lg-5 col-7 px-0"> New questions</button>
+                                    <button type="submit" class="btn btn-success button_user_media col-xl-4 col-lg-5 col-7 px-0 js_new_question_user" data-toggle="modal" data-target="#commonModal"> New questions</button>
                                 </div>
                             </div>
                         </div>
@@ -343,23 +343,288 @@
     <!-- Modal for login and supported parameters -->
     <div class="modal fade" id="commonModal" tabindex="-1" role="dialog" aria-labelledby="commonModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content usermodal1">
-                somethig modal1
+            <div class="modal-content edit_profile_user">
+                <div class="row px-4 px-lg-0" >
+                    <form class="col-12 col-xl-11">
+                        <div class="row justify-content-between pr-0 pr-xl-5">
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="yourName">Your name</label>
+                                    <input type="text" class="form-control" id="yourName">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="birthday">Birthday*</label>
+                                    <input type="date" class="form-control" id="birthday">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="phone">Phone</label>
+                                    <input type="text" class="form-control" id="phone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between pr-0 pr-xl-5">
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="Surname">Surname*</label>
+                                    <input type="text" class="form-control" id="Surname">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="gender">Gender*</label>
+                                    <input type="text" class="form-control" id="gender">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="mobilePhone">Mobile phone</label>
+                                    <input type="text" class="form-control" id="mobilePhone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between pr-0 pr-xl-5">
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="idNumber">ID Number</label>
+                                    <input type="number" class="form-control" id="idNumber">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="height">Height(cm)*</label>
+                                    <input type="text" class="form-control" id="height">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="emailAdress">Email address</label>
+                                    <input type="email" class="form-control" id="emailAdress">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between pr-0 pr-xl-5">
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="password">Password*</label>
+                                    <input type="password" class="form-control" id="password">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="language">Language*</label>
+                                    <input type="text" class="form-control" id="language">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="country">Country*</label>
+                                    <input type="text" class="form-control" id="country">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between pr-0 pr-xl-5">
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="bloodGroup">Blood Group*</label>
+                                    <input type="text" class="form-control" id="bloodGroup">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="serviceProvider">Service provider*</label>
+                                    <input type="text" class="form-control" id="serviceProvider">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="organization">Organization*</label>
+                                    <input type="text" class="form-control" id="organization">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between pr-0 pr-xl-5">
+                            <div class="col-lg-8">
+                                <div class="row">
+                                    <h5>Questions relating to the assessment of cardiovascular disease risk</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between pr-0 pr-xl-5">
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="smoking">Smoking*</label>
+                                    <input type="text" class="form-control" id="smoking">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="diabets1">Diabets*</label>
+                                    <input type="text" class="form-control" id="diabets1">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="diabets2">Diabets*</label>
+                                    <input type="text" class="form-control" id="diabets2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between pr-0 pr-xl-5">
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="degree">Angina or Heart attack in a 1st degree relative <60? *</label>
+                                    <input type="text" class="form-control" id="degree">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="ethncity">Ethncity*</label>
+                                    <input type="text" class="form-control" id="ethncity">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="disease">Chronic kidney disease*</label>
+                                    <input type="text" class="form-control" id="disease">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between pr-0 pr-xl-5">
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="fibril">Artial fibrillation*</label>
+                                    <input type="text" class="form-control" id="fibril">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="val">Do you getting pressure treatment?*</label>
+                                    <input type="text" class="form-control" id="val">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 mb-3">
+                                <div class="row">
+                                    <label for="arthritis">Rheumatoid arthritis*</label>
+                                    <input type="text" class="form-control" id="arthritis">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between pr-0 pr-xl-5 mb-5">
+                            <div class="col-6 col-lg-4">
+                                <div class="row mb-0 mb-lg-5">
+                                    <p class="mb-3">*Star fields are mandatory</p>
+                                    <p>E-mail address is required in order to recieve a new password if you’ve forgotten.</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="row align-items-end flex-column flex-lg-row">
+                                    <button class="btn back_btn mr-0 mr-lg-4 mb-2 ml-auto" type="submit">Back</button>
+                                    <button class="btn register_btn mb-2" type="submit">Register</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="modal-content usermodal2">
+            <div class="modal-content change_password">
                 <div class="modal-body px-4">
                     <div class="col-12">
                         <div class="row">
-                            Other modal2
+                            <div class="col-12 pt-2">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div class="modal-body px-4">
+                                <form class="form-horizontal" role="form" method="POST" action="/login">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group row mb-0">
+                                                <label for="cardNumber" class="col-lg-4 col-form-label">Card Number</label>
+                                                <div class="col-lg-8">
+                                                    <input type="text" class="form-control" id="cardNumber">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-lg-12 label_between" for="">or</label>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group row">
+                                                <label for="citizenId" class="col-lg-4 col-form-label">Citizen id</label>
+                                                <div class="col-lg-8">
+                                                    <input type="text" class="form-control" id="citizenId">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group row mb-0">
+                                                <label for="inputPassword" class="col-lg-4 col-form-label">Password</label>
+                                                <div class="col-lg-8">
+                                                    <input type="password" class="form-control" id="inputPassword">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-end pr-3">
+                                        <a class="btn_link" href="">Forgot Password?</a>
+                                    </div>
+                                    <div class="row py-2">
+                                        <label for="" class="col-12">If you are a new user:</label>
+                                    </div>
+                                    <div class="row  justify-content-between pb-4 pt-2">
+                                        <div class="col-lg-8 pr-3">
+                                            <p>You need to get a health card from the mobile health station. To find your nearest
+                                                mobile health station
+                                                <a class="btn_link1" href="">please click</a>
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-4 align-self-end d-flex pt-3">
+                                            <button type="submit" class="btn btn-success col-lg-10 col-12 ml-auto"> Login</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="modal-content usermodal3">
+            <div class="modal-content new_question">
                 <div class="modal-body px-4">
                     <div class="col-12">
                         <div class="row">
-                            Other modal3
+                            <div class="col-12 py-4 d-flex justify-content-between">
+                                <h5 class="text-uppercase">Message</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="col-12">
+                                    <form class="form-horizontal" role="form" method="POST" action="/login">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-group row">
+                                                    <textarea type="text" class="form-control" id="message" row="15"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row  justify-content-center pb-4 pt-2">
+                                            <div class="col-lg-4 align-self-center d-flex">
+                                                <button type="submit" class="btn btn-success col-lg-10 col-12 ml-auto">Send</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

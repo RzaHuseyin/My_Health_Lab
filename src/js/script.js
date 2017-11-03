@@ -24,6 +24,7 @@ activeModal(".js_log_modal","#product .box_shadow","loginModal","product_modal")
 // modal organization_modal  and station_modal    >>>admin  bage
 activeModal("#stations_admin b","#organizations_admin b","station_modal","organization_modal")
 
+
 function activeModal(clickButton1, clickbutton2,modalClass1,modalClass2){
     $(clickButton1).click(function () {
         $("#commonModal").removeClass(modalClass2).addClass(modalClass1)
@@ -32,6 +33,7 @@ function activeModal(clickButton1, clickbutton2,modalClass1,modalClass2){
         $("#commonModal").removeClass(modalClass1).addClass(modalClass2)
     })
 }
+
 // end all modal function *******************************
 
 $('.owl-carousel').owlCarousel({
@@ -142,4 +144,14 @@ $(".js_button_report").click(function(){
 $(".dropdown_user_nav").click(function(){
     $(".dropdown_menu_user").toggle()
 
+})
+
+$(".js_edit_user").click(function (){
+        $("#commonModal").removeClass("new_question_modal").removeClass("change_password_modal").addClass("edit_profile_user_modal")
+})
+$(".js_change_password_user").click(function (){
+    $("#commonModal").removeClass("new_question_modal").removeClass("edit_profile_user_modal").addClass("change_password_modal")
+})
+$(".js_new_question_user").click(function (){
+    $("#commonModal").removeClass("edit_profile_user_modal").removeClass("change_password_modal").addClass("new_question_modal")
 })

@@ -17,8 +17,7 @@
         padding: 0
     .js_button
         width: auto
-    span
-        width: 10px
+   
     .active_button
         color: $greenA400
         background-color: white
@@ -129,13 +128,19 @@
         border: 2px solid rgb(255, 0, 0)
         border-radius: 5px
         height: 300px
-        width: 85%
+        width: 95%
         overflow: hidden
-        h3
-            font-size: 16px
-            font-family: $font_familyMark
-            color: rgb(77, 77, 77)
-            line-height: 1.2
+        h3, .span_left, .span_right
+            @include text_style(16px, $font_familyMark, rgb(77, 77, 77), 800, 1.6)
+            
+        .span_left
+           font-weight: 600
+        .span_right
+             font-weight: 800
+
+
+ 
+
 
 
     .recom_button
