@@ -78,50 +78,6 @@ $('.owl-carousel').owlCarousel({
 // });
 
 
-AmCharts.makeChart("chartdiv",
-{
-    "type": "pie",
-    "angle": 46.8,
-    "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
-    "depth3D": 8,
-    "innerRadius": "50%",
-    "labelRadius": 19,
-    "colors": [
-        "#83bc00",
-        "#e6e6e6"
-    ],
-    "gradientRatio": [],
-    "labelColorField": "#0000FF",
-    "labelTickAlpha": 1,
-    "outlineColor": "#000000",
-    "outlineThickness": 22,
-    "titleField": "category",
-    "valueField": "column-1",
-    "color": "#008000",
-    "fontSize": 15,
-    "handDrawScatter": 0,
-    "handDrawThickness": 0,
-    "theme": "default",
-    "allLabels": [],
-    "balloon": {},
-    "legend": {
-        "enabled": true,
-        "align": "center",
-        "markerType": "circle"
-    },
-    "titles": [],
-    "dataProvider": [
-        {
-            "category": "75%",
-            "column-1": "7.5"
-        },
-        {
-            "category": "25%",
-            "column-1": "2.5"
-        }
-    ]
-}
-);
 
 // js button 
 $(".js_button").click(function(){
@@ -154,4 +110,14 @@ $(".js_change_password_user").click(function (){
 })
 $(".js_new_question_user").click(function (){
     $("#commonModal").removeClass("edit_profile_user_modal").removeClass("change_password_modal").addClass("new_question_modal")
+})
+
+
+
+//product open page js
+$(".js_product_open").click(function(){
+    $(".js_product_open").removeClass("bg_colorProduct");
+    $(this).addClass("bg_colorProduct") ;
+    $(".js_main_pro_open img").attr("src",  $(this).children("img").attr("src"))
+    
 })
